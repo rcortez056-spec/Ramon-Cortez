@@ -1,6 +1,6 @@
 # Hi there, I'm Ramón Cortez 👋 
 
-## AI System Architect | Agentic RAG Pipelines & Autonomous Workforces With Cluad
+## AI System Architect | Agentic RAG Pipelines & Autonomous Workforces With Cluade
 I design and deploy production-ready AI automation workflows, intelligent agents, and custom enterprise systems that optimize operations and eliminate manual bottlenecks. By bridging the gap between advanced artificial intelligence and business strategy, I help scale operational capabilities without increasing overhead.
 
 ---
