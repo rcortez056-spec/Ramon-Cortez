@@ -8,7 +8,7 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 
 ### 🛠️ Core Expertise & Ecosystem
 *   **AI Architecture:** Agentic RAG Pipelines, Autonomous Workforces, Multi-Agent Orchestration
-*   **No-Code/Low-Code AI Platforms:** Relevance AI, Claude (Anthropic), Gemini (OpenAI)
+*   **No-Code/Low-Code AI Platforms:** Relevance AI, Claude (Anthropic), Gemini (Google)
 *   **Automation & Integrations:** Custom Webhooks, API Connectors, Intelligent Data Pipelines
 *   **Core Focus:** Designing systems to maximize personal and enterprise efficiency before scaling commercial operations.
 
@@ -40,8 +40,7 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 
 ---### 🚀 Live Workflow Logic & Architecture
 
-
-### 📬 Connect With Me### 🚀 Project 1: Live Workflow Logic & Architecture
+### 🚀 Project 1: Live Workflow Logic & Architecture
 You can view the active Claude system design, interactive variables, and structured execution logic here:
 
 * **Claude System Artifact:** https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2
@@ -53,6 +52,7 @@ An interactive, browser-native 3D simulation visualizing real-time data pipelini
 
 * **Claude 3D Visualizer Artifact:** https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00
 * 
+* ### 📬 Connect With Me
 Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
 *   **Credly Portfolio:** https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly
