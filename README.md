@@ -19,7 +19,17 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
 *   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
-*   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.
+*   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.### ⚙️ Core Architecture Visualized
+*   
+This blueprint models an autonomous data loop connecting three vital enterprise systems, handling fluid read/write events across the pipeline:
+*   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
+*   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
+*   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
+
+### 🛠️ Technical Implementation Details
+*   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
+*   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
+*   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycasting calculations for deep user interaction.
 
 #### 🔄 2. Relevance AI Autonomous Workforces
 *   **Overview:** Modular blueprints for building and chaining autonomous AI agents.
