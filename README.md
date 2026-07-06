@@ -59,4 +59,4 @@ Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **Inquiries:** Direct Message via LinkedIn
 
 *"Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
-[4c2819e9-8098-4547-9ced-7a4772b67fa9.html](https://github.com/user-attachments/files/29687141/4c2819e9-8098-4547-9ced-7a4772b67fa9.html)
+
