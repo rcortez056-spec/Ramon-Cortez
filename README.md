@@ -41,8 +41,8 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 
 ### 📬 Connect With Me
 Let's discuss AI transformation, autonomous workflows, or system architecture:
-*   **LinkedIn:** [://linkedin.com](https://linkedin.com) 
-*   **Credly Portfolio:** [://credly.com](https://credly.com)
+*   **LinkedIn:**  https://linkedin.com/in/ramon-cortez
+*   **Credly Portfolio:** https://lnkd.in/gqnQAPk6
 *   **Inquiries:** Direct Message via LinkedIn
 
 *"Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
