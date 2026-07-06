@@ -37,7 +37,10 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 *   **Google:** Advanced Generative AI & Cloud Architecture Portfolios
 *   **Core Competencies:** Generative AI Literacy, System Safety, and Ethical Considerations in AI Design.
 
----
+---### 🚀 Live Workflow Logic & Architecture
+You can view the active Claude system design, interactive variables, and structured execution logic here:
+
+* **Claude System Artifact:** https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2
 
 ### 📬 Connect With Me
 Let's discuss AI transformation, autonomous workflows, or system architecture:
