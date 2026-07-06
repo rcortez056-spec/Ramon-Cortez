@@ -1,5 +1,6 @@
 # Hi there, I'm Ramón Cortez 👋 
 
+
 ## AI System Architect | Agentic RAG Pipelines & Autonomous Workforces With Claude
 I design and deploy production-ready AI automation workflows, intelligent agents, and custom enterprise systems that optimize operations and eliminate manual bottlenecks. By bridging the gap between advanced artificial intelligence and business strategy, I help scale operational capabilities without increasing overhead.
 
@@ -38,14 +39,24 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 *   **Core Competencies:** Generative AI Literacy, System Safety, and Ethical Considerations in AI Design.
 
 ---### 🚀 Live Workflow Logic & Architecture
+
+
+### 📬 Connect With Me### 🚀 Project 1: Live Workflow Logic & Architecture
 You can view the active Claude system design, interactive variables, and structured execution logic here:
 
 * **Claude System Artifact:** https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2
 
-### 📬 Connect With Me
+---
+
+### 🌐 Project 2: 3D Data Orchestration Engine (Live Automation Workflow)
+An interactive, browser-native 3D simulation visualizing real-time data pipelining, node communication, and state sync across enterprise platforms.
+
+* **Claude 3D Visualizer Artifact:** https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00
+* 
 Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
 *   **Credly Portfolio:** https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly
 *   **Inquiries:** Direct Message via LinkedIn
 
 *"Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
+[4c2819e9-8098-4547-9ced-7a4772b67fa9.html](https://github.com/user-attachments/files/29687141/4c2819e9-8098-4547-9ced-7a4772b67fa9.html)
