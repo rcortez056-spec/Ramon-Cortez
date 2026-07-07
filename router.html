@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Event Orchestration Pipeline — System Schematic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1628;
+    --grid:#16284a;
+    --paper:#d7e8f7;
+    --paper-dim:#5b7ca3;
+    --accent:#ff8a3d;
+    --track-a:#7dd3fc;
+    --track-b:#fbbf24;
+    --track-c:#fb7185;
+    --panel:#0e1f38;
+    --line:#23456e;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--bg);
+    color:var(--paper);
+    font-family:'JetBrains Mono', monospace;
+    min-height:100%;
+  }
+
+  body{
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:28px 28px;
+    background-position:-1px -1px;
+    padding:18px 14px 32px;
+  }
+
+  .sheet{
+    max-width:880px;
+    margin:0 auto;
+    border:1px solid var(--line);
+    background:rgba(10,22,40,0.55);
+    backdrop-filter:blur(2px);
+  }
+
+  /* ---------- HEADER ---------- */
+  .header{
+    padding:22px 22px 16px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .eyebrow{
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .dot{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 8px var(--accent);
+    animation:pulse 1.6s ease-in-out infinite;
+    flex-shrink:0;
+  }
+
+  @keyframes pulse{
+    0%,100%{opacity:1;}
+    50%{opacity:0.25;}
+  }
+
+  h1{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:clamp(22px,4.5vw,34px);
+    letter-spacing:-0.01em;
+    margin:8px 0 6px;
+    color:#f3f8fc;
+  }
+
+  .sub{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--paper-dim);
+    max-width:56ch;
+  }
+
+  /* ---------- SCHEMATIC ---------- */
+  .schematic-wrap{
+    padding:18px 14px 4px;
+  }
+
+  svg{ display:block; width:100%; height:auto; overflow:visible; }
+
+  .station-box{
+    fill:var(--panel);
+    stroke:var(--line);
+    stroke-width:1.5;
+    transition:stroke 0.25s ease, filter 0.25s ease;
+  }
+  .station-box.active-a{ stroke:var(--track-a); filter:drop-shadow(0 0 6px rgba(125,211,252,0.55)); }
+  .station-box.active-b{ stroke:var(--track-b); filter:drop-shadow(0 0 6px rgba(251,191,36,0.55)); }
+  .station-box.active-c{ stroke:var(--track-c); filter:drop-shadow(0 0 6px rgba(251,113,133,0.55)); }
+
+  .station-label{
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    fill:#f3f8fc;
+  }
+  .station-sub{
+    font-family:'JetBrains Mono', monospace;
+    font-size:9.5px;
+    fill:var(--paper-dim);
+    letter-spacing:0.04em;
+  }
+
+  .junction-ring{
+    fill: none;
+    stroke:var(--line);
+    stroke-width:1.5;
+  }
+  .junction-core{
+    fill:var(--panel);
+    stroke:var(--paper-dim);
+    stroke-width:1;
+  }
+  .junction-pulse{
+    fill: none;
+    stroke:var(--accent);
+    stroke-width:2;
+    opacity:0;
+    transform-origin:160px 230px;
+  }
+  .junction-pulse.fire{
+    animation: ring 0.7s ease-out;
+  }
+  @keyframes ring{
+    0%{ opacity:0.9; transform:scale(0.4); }
+    100%{ opacity:0; transform:scale(1.9); }
+  }
+
+  .track-base{
+    fill: none;
+    stroke:var(--paper);
+    stroke-opacity:0.18;
+    stroke-width:1.4;
+    stroke-dasharray:3 5;
+  }
+  .track-flow{
+    fill: none;
+    stroke-width:3;
+    stroke-linecap: round;
+    filter:drop-shadow(0 0 4px currentColor);
+  }
+  .track-flow.a{ stroke:var(--track-a); color:var(--track-a); }
+  .track-flow.b{ stroke:var(--track-b); color:var(--track-b); }
+  .track-flow.c{ stroke:var(--track-c); color:var(--track-c); }
+
+  .signal-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    fill:var(--paper-dim);
+    letter-spacing:0.05em;
+  }
+  .signal-text{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    font-weight:500;
+    fill:#f3f8fc;
+  }
+  .signal-box{
+    fill:var(--panel);
+    stroke:var(--line);
+    stroke-width:1.5;
+  }
+
+  /* ---------- LEGEND ---------- */
+  .legend{
+    display: flex;
+    flex-wrap: wrap;
+    gap:14px 22px;
+    padding:14px 22px 6px;
+    font-size:10.5px;
+    color:var(--paper-dim);
+  }
+  .legend span{
+    display:inline-flex;
+    align-items: center;
+    gap:7px;
+  }
+  .swatch{
+    width:10px;height:10px;
+    border-radius:2px;
+    flex-shrink:0;
+  }
+
+  /* ---------- LOG ---------- */
+  .log-wrap{
+    margin:18px 22px 22px;
+    border:1px solid var(--line);
+  }
+  .log-head{
+    display:grid;
+    grid-template-columns:46px 64px 1fr 110px 90px;
+    gap:8px;
+    padding:9px 12px;
+    background:rgba(35,69,110,0.25);
+    border-bottom:1px solid var(--line);
+    font-family:'Oswald', sans-serif;
+    font-size:10px;
+    letter-spacing:0.12em;
+    text-transform: uppercase;
+    color:var(--paper-dim);
+  }
+  .log-body{
+    max-height:240px;
+    overflow-y: auto;
+  }
+  .log-row{
+    display: grid;
+    grid-template-columns:46px 64px 1fr 110px 90px;
+    gap:8px;
+    padding:8px 12px;
+    font-size:11px;
+    border-bottom:1px solid rgba(35,69,110,0.5);
+    animation:rowIn 0.35s ease;
+  }
+  @keyframes rowIn{
+    from{ opacity:0; transform:translateY(-4px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .log-row .num{ color:var(--paper-dim); }
+  .log-row .time{ color:var(--paper-dim); }
+  .log-row .ev{ color:var(--paper); }
+  .log-row .route.a{ color:var(--track-a); }
+  .log-row .route.b{ color:var(--track-b); }
+  .log-row .route.c{ color:var(--track-c); }
+  .log-row .status{ color:#7fd99a; }
+
+  /* ---------- TITLE BLOCK ---------- */
+  .titleblock{
+    display: flex;
+    flex-wrap: wrap;
+    gap:6px 26px;
+    padding:14px 22px 20px;
+    border-top:1px solid var(--line);
+    font-size:10px;
+    color:var(--paper-dim);
+    letter-spacing:0.04em;
+  }
+  .titleblock b{ color:var(--paper); font-weight:600; }
+
+  ::-webkit-scrollbar{ width:8px; }
+  ::-webkit-scrollbar-thumb{ background:var(--line); }
+
+  @media (max-width:520px){
+    .log-head, .log-row{
+      grid-template-columns:30px 0px 1fr 78px 0px;
+    }
+    .log-head span:nth-child(2), .log-head span:nth-child(5),
+    .log-row .time, .log-row .status{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="header">
+    <div class="eyebrow"><span class="dot"></span>AI Architect — System Schematic</div>
+    <h1>Event Orchestration Pipeline</h1>
+    <p class="sub">A lightweight router that inspects each incoming event and dispatches it to the right tool. Simulated client-side for this demo — no backend, no live data.</p>
+  </div>
+
+  <div class="schematic-wrap">
+    <svg id="svg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
+
+      <!-- base tracks -->
+      <path class="track-base" d="M 192 218 C 350 150, 470 110, 612 110" />
+      <path class="track-base" d="M 192 230 L 612 230" />
+      <path class="track-base" d="M 192 242 C 350 310, 470 350, 612 350" />
+
+      <!-- animated flow overlays -->
+      <path id="flow-a" class="track-flow a" d="M 192 218 C 350 150, 470 110, 612 110" />
+      <path id="flow-b" class="track-flow b" d="M 192 230 L 612 230" />
+      <path id="flow-c" class="track-flow c" d="M 192 242 C 350 310, 470 350, 612 350" />
+
+      <!-- junction -->
+      <circle class="junction-ring" cx="160" cy="230" r="34" />
+      <circle id="junction-pulse" class="junction-pulse" cx="160" cy="230" r="34" />
+      <circle class="junction-core" cx="160" cy="230" r="22" />
+      <text x="160" y="234" text-anchor="middle" class="signal-text" font-size="10">ROUTER</text>
+
+      <!-- incoming signal box -->
+      <rect class="signal-box" x="14" y="196" width="120" height="68" rx="2" />
+      <text x="24" y="214" class="signal-label">INCOMING</text>
+      <text id="signal-text" x="24" y="234" class="signal-text" font-size="11">—</text>
+      <text id="signal-text-2" x="24" y="250" class="signal-text" font-size="11"></text>
+
+      <!-- station A -->
+      <rect id="box-a" class="station-box" x="612" y="64" width="220" height="92" rx="2" />
+      <text x="630" y="98" class="station-label">TOOL A</text>
+      <text x="630" y="116" class="station-sub">HANDLER · default route</text>
+      <text id="route-code-a" x="630" y="138" class="station-sub" fill="var(--track-a)">ROUTE-A · idle</text>
+
+      <!-- station B -->
+      <rect id="box-b" class="station-box" x="612" y="184" width="220" height="92" rx="2" />
+      <text x="630" y="218" class="station-label">TOOL B</text>
+      <text x="630" y="236" class="station-sub">PROCESSOR · payments &amp; jobs</text>
+      <text id="route-code-b" x="630" y="258" class="station-sub" fill="var(--track-b)">ROUTE-B · idle</text>
+
+      <!-- station C -->
+      <rect id="box-c" class="station-box" x="612" y="304" width="220" height="92" rx="2" />
+      <text x="630" y="338" class="station-label">TOOL C</text>
+      <text x="630" y="356" class="station-sub">LOGGER · error capture</text>
+      <text id="route-code-c" x="630" y="378" class="station-sub" fill="var(--track-c)">ROUTE-C · idle</text>
+
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span><i class="swatch" style="background:var(--track-a)"></i>default events → Tool A</span>
+    <span><i class="swatch" style="background:var(--track-b)"></i>"process…" events → Tool B</span>
+    <span><i class="swatch" style="background:var(--track-c)"></i>"error…" events → Tool C</span>
+  </div>
+
+  <div class="log-wrap">
+    <div class="log-head">
+      <span>NO.</span><span>TIME</span><span>EVENT</span><span>ROUTE</span><span>STATUS</span>
+    </div>
+    <div class="log-body" id="log-body"></div>
+  </div>
+
+  <div class="titleblock">
+    <span>DWG NO. <b>ORC-001</b></span>
+    <span>SCALE <b>NTS</b></span>
+    <span>REV <b>B</b></span>
+    <span>DESIGNED <b>Ramon Cortez, AI Architect</b></span>
+    <span>STATUS <b style="color:#7fd99a">● LIVE SIMULATION</b></span>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const events = [
+    "user signup",
+    "process payment",
+    "data sync request",
+    "error detected",
+    "analytics update",
+    "process refund",
+    "error: timeout",
+    "new subscriber"
+  ];
+
+  function route(ev){
+    const e = ev.toLowerCase();
+    if(e.includes("error")) return "c";
+    if(e.includes("process")) return "b";
+    return "a";
+  }
+
+  const labels = {
+    a: { tool: "Tool A (Handler)" },
+    b: { tool: "Tool B (Processor)" },
+    c: { tool: "Tool C (Logger)" }
+  };
+
+  const flowEls = { a: document.getElementById('flow-a'), b: document.getElementById('flow-b'), c: document.getElementById('flow-c') };
+  const boxEls  = { a: document.getElementById('box-a'),  b: document.getElementById('box-b'),  c: document.getElementById('box-c') };
+  const codeEls = { a: document.getElementById('route-code-a'), b: document.getElementById('route-code-b'), c: document.getElementById('route-code-c') };
+
+  const lens = {};
+  Object.keys(flowEls).forEach(k=>{
+    const len = flowEls[k].getTotalLength();
+    lens[k] = len;
+    flowEls[k].style.strokeDasharray = len;
+    flowEls[k].style.strokeDashoffset = len;
+    flowEls[k].style.transition = 'none';
+  });
+
+  const sigText = document.getElementById('signal-text');
+  const sigText2 = document.getElementById('signal-text-2');
+  const pulse = document.getElementById('junction-pulse');
+  const logBody = document.getElementById('log-body');
+
+  let counter = 0;
+  const MAX_ROWS = 9;
+
+  function wrapText(str, max){
+    if(str.length <= max) return [str, ''];
+    const cut = str.lastIndexOf(' ', max);
+    const splitAt = cut > 0 ? cut : max;
+    return [str.slice(0, splitAt), str.slice(splitAt+1)];
+  }
+
+  function fireFlow(key){
+    const el = flowEls[key];
+    const len = lens[key];
+    el.style.transition = 'none';
+    el.style.strokeDashoffset = len;
+    void el.getBoundingClientRect();
+    el.style.transition = 'stroke-dashoffset 0.65s ease';
+    el.style.strokeDashoffset = 0;
+
+    setTimeout(()=>{
+      boxEls[key].classList.add('active-' + key);
+      codeEls[key].textContent = 'ROUTE-' + key.toUpperCase() + ' · executed';
+    }, 600);
+
+    setTimeout(()=>{
+      el.style.transition = 'stroke-dashoffset 0.5s ease';
+      el.style.strokeDashoffset = -len;
+    }, 1300);
+
+    setTimeout(()=>{
+      boxEls[key].classList.remove('active-' + key);
+      codeEls[key].textContent = 'ROUTE-' + key.toUpperCase() + ' · idle';
+    }, 2000);
+  }
+
+  function addLogRow(time, ev, key){
+    counter++;
+    const row = document.createElement('div');
+    row.className = 'log-row';
+    row.innerHTML =
+      '<span class="num">' + String(counter).padStart(3,'0') + '</span>' +
+      '<span class="time">' + time + '</span>' +
+      '<span class="ev">' + ev + '</span>' +
+      '<span class="route ' + key + '">' + labels[key].tool + '</span>' +
+      '<span class="status">done</span>';
+    logBody.insertBefore(row, logBody.firstChild);
+    while(logBody.children.length > MAX_ROWS){
+      logBody.removeChild(logBody.lastChild);
+    }
+  }
+
+  function tick(){
+    const ev = events[Math.floor(Math.random()*events.length)];
+    const key = route(ev);
+    const [l1, l2] = wrapText(ev, 16);
+
+    sigText.textContent = l1;
+    sigText2.textContent = l2;
+
+    pulse.classList.remove('fire');
+    void pulse.getBoundingClientRect();
+    pulse.classList.add('fire');
+
+    setTimeout(()=> fireFlow(key), 180);
+
+    const now = new Date();
+    const time = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0') + ':' + String(now.getSeconds()).padStart(2,'0');
+    setTimeout(()=> addLogRow(time, ev, key), 600);
+  }
+
+  tick();
+  setInterval(tick, 2600);
+})();
+</script>
+
+</body>
+</html>
