@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Morning Briefing — Restaurant Demo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0d0a;--surface:#191611;--surface2:#1f1c17;--border:#2a2620;--border-lit:#3d3628;
+  --amber:#f5a623;--amber-dim:#7a5010;--amber-glow:rgba(245,166,35,0.08);
+  --green:#4caf82;--green-dim:#1f4a36;--green-glow:rgba(76,175,130,0.08);
+  --red:#e05c5c;--blue:#6ba3d6;
+  --text:#ede5d8;--muted:#6e6558;--muted2:#4a453d;
+  --mono:'IBM Plex Mono',monospace;--display:'Syne',sans-serif;--body:'Inter',sans-serif;
+  --radius:10px;--radius-sm:6px;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--body);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 16px 100px}
+
+/* ─── HEADER ─── */
+.header{text-align:center;max-width:640px;margin-bottom:44px}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--amber);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.eyebrow::before,.eyebrow::after{content:'';flex:1;max-width:40px;height:1px;background:var(--amber-dim)}
+h1{font-family:var(--display);font-size:clamp(28px,5.5vw,46px);font-weight:800;line-height:1.08;margin-bottom:14px;letter-spacing:-0.01em}
+h1 span{color:var(--amber)}
+.subtitle{font-size:14px;color:var(--muted);line-height:1.65;max-width:480px;margin:0 auto}
+
+/* ─── FORM ─── */
+.form-card{width:100%;max-width:700px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.form-title{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--amber);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.form-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group.full{grid-column:1/-1}
+label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.label-badge{font-size:9px;background:var(--surface2);border:1px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--muted2);letter-spacing:0.06em}
+input,textarea{background:#0a0806;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-family:var(--mono);font-size:13px;padding:11px 13px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;resize:vertical;width:100%}
+input:focus,textarea:focus{border-color:var(--amber-dim);box-shadow:0 0 0 3px var(--amber-glow)}
+textarea{min-height:76px}
+.hint{font-size:11px;color:var(--muted2);line-height:1.5}
+
+/* ─── RUN BUTTON ─── */
+.trigger-wrap{width:100%;max-width:700px;margin-bottom:36px}
+#runBtn{
+  width:100%;font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:0.05em;
+  background:var(--amber);color:#0a0806;border:none;border-radius:var(--radius-sm);
+  padding:16px 36px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:opacity 0.15s,transform 0.12s,box-shadow 0.15s;
+  box-shadow:0 4px 24px rgba(245,166,35,0.25)
+}
+#runBtn:hover:not(:disabled){opacity:0.9;transform:translateY(-1px);box-shadow:0 6px 28px rgba(245,166,35,0.35)}
+#runBtn:active:not(:disabled){transform:translateY(0)}
+#runBtn:disabled{opacity:0.35;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-icon{font-size:17px;transition:transform 0.3s}
+#runBtn:hover .btn-icon{transform:scale(1.15)}
+
+/* ─── PIPELINE ─── */
+.pipeline{width:100%;max-width:700px;display:flex;flex-direction:column}
+
+.step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:4px;transition:border-color 0.3s,box-shadow 0.3s,opacity 0.3s}
+.step.waiting{opacity:0.3}
+.step.active{opacity:1;border-color:var(--amber-dim);box-shadow:0 0 0 1px var(--amber-dim),0 4px 20px var(--amber-glow)}
+.step.done{opacity:1;border-color:var(--green-dim);box-shadow:0 0 0 1px var(--green-dim),0 2px 12px var(--green-glow)}
+
+.step-header{display:flex;align-items:center;gap:12px;margin-bottom:0}
+.step-icon-wrap{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--surface2);border:1px solid var(--border);transition:background 0.3s,border-color 0.3s}
+.step.active .step-icon-wrap{background:var(--amber-glow);border-color:var(--amber-dim)}
+.step.done .step-icon-wrap{background:var(--green-glow);border-color:var(--green-dim)}
+.step-meta{flex:1;min-width:0}
+.step-label{font-family:var(--mono);font-size:9px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase;margin-bottom:3px}
+.step-title{font-family:var(--display);font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.step-status{font-family:var(--mono);font-size:10px;color:var(--muted);transition:color 0.3s;white-space:nowrap}
+.step.active .step-status{color:var(--amber)}
+.step.done .step-status{color:var(--green)}
+.copy-btn{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:4px 10px;border-radius:4px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);cursor:pointer;transition:all 0.2s;display:none;white-space:nowrap}
+.copy-btn:hover{border-color:var(--amber-dim);color:var(--amber);background:var(--amber-glow)}
+.copy-btn.copied{border-color:var(--green-dim);color:var(--green);background:var(--green-glow)}
+.step.done .copy-btn{display:block}
+
+/* pulse animation for active */
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(245,166,35,0.3)}70%{box-shadow:0 0 0 6px rgba(245,166,35,0)}100%{box-shadow:0 0 0 0 rgba(245,166,35,0)}}
+.step.active .step-icon-wrap{animation:pulse-ring 1.8s ease-out infinite}
+
+.step-output{font-family:var(--mono);font-size:12.5px;line-height:1.7;color:var(--text);background:#080604;border-radius:6px;padding:0;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s ease,margin 0.3s ease;white-space:pre-wrap;word-break:break-word;margin-top:0}
+.step.active .step-output,.step.done .step-output{max-height:700px;padding:14px 16px;margin-top:16px;border:1px solid var(--border-lit)}
+
+.cursor-active::after{content:'▋';color:var(--amber);animation:blink 0.65s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* progress bar */
+.step-progress{height:2px;border-radius:1px;background:var(--border);margin-top:10px;overflow:hidden;display:none}
+.step.active .step-progress{display:block}
+.step-progress-bar{height:100%;width:0%;background:var(--amber);border-radius:1px;transition:width 0.1s linear}
+
+/* ─── CONNECTOR ─── */
+.connector{display:flex;justify-content:center;height:24px;align-items:center;position:relative}
+.conn-line{width:1px;height:100%;background:var(--border);transition:background 0.4s}
+.conn-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--border);transition:background 0.4s,box-shadow 0.4s}
+.connector.lit .conn-line{background:var(--amber)}
+.connector.lit .conn-dot{background:var(--amber);box-shadow:0 0 6px var(--amber)}
+
+/* ─── SUMMARY ─── */
+.summary{max-width:700px;width:100%;margin-top:24px;background:var(--surface);border:1px solid var(--green-dim);border-radius:var(--radius);padding:0;opacity:0;max-height:0;overflow:hidden;transition:opacity 0.4s ease,max-height 0.5s ease,padding 0.4s ease;box-shadow:0 0 0 1px var(--green-dim),0 4px 24px var(--green-glow)}
+.summary.show{opacity:1;max-height:400px;padding:24px 28px}
+.summary-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:gap}
+.summary-title{font-family:var(--display);font-weight:800;font-size:14px;color:var(--green);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.copy-all-btn{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:7px 14px;border-radius:4px;border:1px solid var(--green-dim);background:var(--green-glow);color:var(--green);cursor:pointer;transition:all 0.2s}
+.copy-all-btn:hover{background:rgba(76,175,130,0.15);border-color:var(--green)}
+.copy-all-btn.copied{opacity:0.7}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.summary-stat{text-align:center;padding:12px 8px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border)}
+.summary-stat .val{font-family:var(--display);font-size:22px;font-weight:800;color:var(--amber);display:block;margin-bottom:4px}
+.summary-stat .lbl{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;line-height:1.4}
+.timestamp{font-family:var(--mono);font-size:10px;color:var(--muted2);margin-top:16px;text-align:center}
+
+/* ─── FOOTER ─── */
+.footer{margin-top:56px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:0.08em;line-height:1.8}
+.footer .name{color:var(--amber)}
+.footer .powered{font-size:10px;color:var(--muted2);margin-top:2px}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:520px){
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .summary-grid{grid-template-columns:repeat(2,1fr)}
+  .step-title{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <p class="eyebrow">AI Automation Demo · Restaurant Ops</p>
+  <h1>Your Monday morning,<br><span>automated.</span></h1>
+  <p class="subtitle">Enter your restaurant details, hit run, and watch four AI agents produce your entire morning briefing — sales recap, social caption, review reply, and staff note — in under 60 seconds.</p>
+</div>
+
+<div class="form-card">
+  <div class="form-title">▸ Restaurant Info</div>
+  <div class="form-grid">
+    <div class="form-group full">
+      <label>Restaurant Name</label>
+      <input type="text" id="f-name" value="Casa Fuego SD" />
+    </div>
+    <div class="form-group full">
+      <label>Today's Specials <span class="label-badge">→ Agent 2</span></label>
+      <textarea id="f-specials">Birria Tacos, Elote Cup, Mango Chamoy Agua Fresca</textarea>
+      <span class="hint">Agent 2 writes your Instagram caption directly from this.</span>
+    </div>
+    <div class="form-group">
+      <label>Weekend Top Seller</label>
+      <input type="text" id="f-topseller" value="Birria Tacos (89 sold)" />
+    </div>
+    <div class="form-group">
+      <label>Weekend Revenue</label>
+      <input type="text" id="f-revenue" value="$13,596" />
+    </div>
+    <div class="form-group full">
+      <label>Ops Flag <span class="label-badge">optional</span></label>
+      <input type="text" id="f-flag" value="Horchata ran out Saturday at 7pm — reorder before Friday" />
+    </div>
+    <div class="form-group full">
+      <label>Review to Address <span class="label-badge">optional · → Agent 3</span></label>
+      <textarea id="f-review">Food was great but waited 25 min for chips. Worth it but heads up — Derek R., 3 stars</textarea>
+      <span class="hint">Agent 3 drafts a professional, on-brand reply you can post immediately.</span>
+    </div>
+  </div>
+</div>
+
+<div class="trigger-wrap">
+  <button id="runBtn" onclick="runPipeline()">
+    <span class="btn-icon">▶</span>
+    Run Morning Briefing
+  </button>
+</div>
+
+<div class="pipeline">
+  <!-- Step 0 -->
+  <div class="step waiting" id="step-0">
+    <div class="step-header">
+      <div class="step-icon-wrap">📊</div>
+      <div class="step-meta">
+        <div class="step-label">Agent 1 · Data</div>
+        <div class="step-title">Weekend Sales Recap</div>
+      </div>
+      <div class="step-right">
+        <div class="step-status" id="status-0">waiting</div>
+        <button class="copy-btn" id="copy-0" onclick="copyStep(0)">copy</button>
+      </div>
+    </div>
+    <div class="step-progress"><div class="step-progress-bar" id="prog-0"></div></div>
+    <div class="step-output" id="output-0"></div>
+  </div>
+  <div class="connector" id="conn-0"><div class="conn-line"></div><div class="conn-dot"></div></div>
+
+  <!-- Step 1 -->
+  <div class="step waiting" id="step-1">
+    <div class="step-header">
+      <div class="step-icon-wrap">✍️</div>
+      <div class="step-meta">
+        <div class="step-label">Agent 2 · Content</div>
+        <div class="step-title">Daily Specials Caption</div>
+      </div>
+      <div class="step-right">
+        <div class="step-status" id="status-1">waiting</div>
+        <button class="copy-btn" id="copy-1" onclick="copyStep(1)">copy</button>
+      </div>
+    </div>
+    <div class="step-progress"><div class="step-progress-bar" id="prog-1"></div></div>
+    <div class="step-output" id="output-1"></div>
+  </div>
+  <div class="connector" id="conn-1"><div class="conn-line"></div><div class="conn-dot"></div></div>
+
+  <!-- Step 2 -->
+  <div class="step waiting" id="step-2">
+    <div class="step-header">
+      <div class="step-icon-wrap">⭐</div>
+      <div class="step-meta">
+        <div class="step-label">Agent 3 · Reputation</div>
+        <div class="step-title">Review Monitor & Reply Draft</div>
+      </div>
+      <div class="step-right">
+        <div class="step-status" id="status-2">waiting</div>
+        <button class="copy-btn" id="copy-2" onclick="copyStep(2)">copy</button>
+      </div>
+    </div>
+    <div class="step-progress"><div class="step-progress-bar" id="prog-2"></div></div>
+    <div class="step-output" id="output-2"></div>
+  </div>
+  <div class="connector" id="conn-2"><div class="conn-line"></div><div class="conn-dot"></div></div>
+
+  <!-- Step 3 -->
+  <div class="step waiting" id="step-3">
+    <div class="step-header">
+      <div class="step-icon-wrap">📋</div>
+      <div class="step-meta">
+        <div class="step-label">Agent 4 · Ops</div>
+        <div class="step-title">Staff Briefing Note</div>
+      </div>
+      <div class="step-right">
+        <div class="step-status" id="status-3">waiting</div>
+        <button class="copy-btn" id="copy-3" onclick="copyStep(3)">copy</button>
+      </div>
+    </div>
+    <div class="step-progress"><div class="step-progress-bar" id="prog-3"></div></div>
+    <div class="step-output" id="output-3"></div>
+  </div>
+</div>
+
+<div class="summary" id="summary">
+  <div class="summary-header">
+    <div class="summary-title">✓ Briefing Complete</div>
+    <button class="copy-all-btn" id="copyAllBtn" onclick="copyAll()">copy full briefing</button>
+  </div>
+  <div class="summary-grid">
+    <div class="summary-stat"><span class="val">4</span><span class="lbl">Agents ran</span></div>
+    <div class="summary-stat"><span class="val">~45 min</span><span class="lbl">Time saved</span></div>
+    <div class="summary-stat"><span class="val">$0</span><span class="lbl">Extra labor</span></div>
+    <div class="summary-stat"><span class="val">∞</span><span class="lbl">Mondays like this</span></div>
+  </div>
+  <div class="timestamp" id="ts"></div>
+</div>
+
+<div class="footer">
+  Built by <span class="name">Ramon Cortez</span> · AI Architect in the Making · San Diego
+  <div class="powered">Powered by AI · This is what your mornings could look like.</div>
+</div>
+
+<script>
+const g = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+let outputs = ['','','',''];
+
+// ── Progress bar runner
+async function runProgress(idx, durationMs) {
+  const bar = g(`prog-${idx}`);
+  const steps = 60;
+  const interval = durationMs / steps;
+  for (let i = 1; i <= steps; i++) {
+    bar.style.width = (i / steps * 100) + '%';
+    await sleep(interval);
+  }
+}
+
+// ── Typewriter
+async function typeText(el, text, speed) {
+  el.classList.add('cursor-active');
+  for (let i = 0; i <= text.length; i++) {
+    el.textContent = text.slice(0, i);
+    await sleep(speed);
+  }
+  el.classList.remove('cursor-active');
+}
+
+// ── Inputs
+function getInputs() {
+  return {
+    name:      g('f-name').value.trim()      || 'My Restaurant',
+    specials:  g('f-specials').value.trim()  || "today's specials",
+    topseller: g('f-topseller').value.trim() || 'top item',
+    revenue:   g('f-revenue').value.trim()   || '$0',
+    flag:      g('f-flag').value.trim(),
+    review:    g('f-review').value.trim(),
+  };
+}
+
+// ── Output generators
+function salesOutput(d) {
+  const flagLine = d.flag ? `\n\n⚠  OPS FLAG\n   ${d.flag}` : '';
+  return `Pulling POS data for ${d.name}...\n\n   Fri  ████████████░░░  strong opening night\n   Sat  ███████████████  peak — fully staffed\n   Sun  ██████████░░░░░  steady close\n   ───────────────────────────────────────\n   Weekend Total    ${d.revenue}\n   Top Seller       ${d.topseller}\n   Avg Check        within normal range\n   Guest Sentiment  positive trending${flagLine}\n\n✓  Data pull complete — passing context to next agents`;
+}
+
+function captionOutput(d) {
+  const items = d.specials.split(',').map(s => s.trim()).filter(Boolean);
+  const first = items[0] || 'today\'s special';
+  const rest  = items.slice(1).join(' + ');
+  const styles = [
+    `Monday just got delicious. 🌮\n\n${first} is back and it's not waiting for you.${rest ? `\nAlso on today: ${rest}.` : ''}\n\nCome see us at ${d.name} — you already know.\n\n#SanDiego #EatLocal #${first.replace(/\s+/g,'').replace(/[^a-zA-Z]/g,'')} #SDEats`,
+    `Your Monday cure has arrived. ✨\n\n${first}${rest ? ` · ${rest}` : ''} — today only at ${d.name}.\n\nLimited availability. First come, first served.\n\n#SDFood #${first.replace(/\s+/g,'').replace(/[^a-zA-Z]/g,'')} #SanDiegoEats #FoodieSD`,
+    `New week. Same obsession. 🔥\n\n${first} is on the menu at ${d.name} and it hits different on a Monday.${rest ? `\nAlso running: ${rest}.` : ''}\n\nSee you today.\n\n#SanDiego #${first.replace(/\s+/g,'').replace(/[^a-zA-Z]/g,'')} #LocalEats #MondayVibes`
+  ];
+  return `Analyzing specials + brand voice...\n\n` + styles[d.name.length % 3];
+}
+
+function reviewOutput(d) {
+  if (!d.review) {
+    return `Scanning Google & Yelp for ${d.name} (last 72 hrs)...\n\n✅  No urgent reviews flagged this weekend.\n   Overall avg:   4.5 ★\n   New reviews:   12\n   Sentiment:     Positive — mentions of food quality, vibe\n   Action needed: None at this time\n\n✓  Monitor complete — no reply needed`;
+  }
+  const parts = d.review.split('—');
+  const reviewerRaw = parts.length > 1 ? parts[1].trim() : '';
+  const reviewer = reviewerRaw.split(',')[0].trim() || 'there';
+  const short = d.review.length > 100 ? d.review.slice(0, 100) + '…' : d.review;
+  const stars = d.review.includes('3 star') ? '3★' : d.review.includes('4 star') ? '4★' : d.review.includes('2 star') ? '2★' : '?★';
+  return `Scanning Google & Yelp for ${d.name} (last 72 hrs)...\n\n⚠  Review flagged for reply:\n   Rating:    ${stars}\n   Reviewer:  ${reviewer}\n   Summary:   "${short}"\n\n─────────────────────────────────────────\nDRAFT REPLY (ready to post):\n─────────────────────────────────────────\nHey ${reviewer} — thank you for the honest feedback, we really appreciate it. You're right, that wait time was on us and we're already working on a fix. Great food deserves a smooth experience and we fell short there. Come back soon — first round is on the house. Hope to see you again! 🙏\n   — The ${d.name} Team`;
+}
+
+function staffOutput(d) {
+  const flagLine = d.flag ? `\n\n⚠  OPS FLAG FOR TODAY:\n   ${d.flag}` : '';
+  const reviewLine = d.review ? `\n\n📋  MANAGER ACTION:\n   Recent review needs a reply before EOD — see Agent 3 output` : '';
+  const specials = d.specials.split(',').map(s => `   · ${s.trim()}`).join('\n');
+  return `STAFF BRIEFING — ${d.name.toUpperCase()}\nGenerated: ${new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}\n\n─────────────────────────────────────────\nGOOD MORNING, TEAM.\n\nWeekend is a wrap — here's what you need to know:\n\n💰  REVENUE\n   ${d.revenue} weekend total — strong finish. Great work.\n\n🏆  TOP PERFORMER\n   ${d.topseller} — feature it, talk it up, sell it today.\n\n🍽  TODAY'S SPECIALS (push these hard)\n${specials}\n\n⚡  ENERGY NOTE\n   Weekend guests often come back on Mondays. Treat every\n   walk-in like a regular — we're building loyalty, not just covers.${flagLine}${reviewLine}\n\n─────────────────────────────────────────\nLet's have a great Monday. — AI Briefing Bot 🤖`;
+}
+
+// ── Copy helpers
+async function copyStep(idx) {
+  const btn = g(`copy-${idx}`);
+  try {
+    await navigator.clipboard.writeText(outputs[idx]);
+    btn.textContent = 'copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+  } catch(e) { btn.textContent = 'error'; }
+}
+
+async function copyAll() {
+  const full = outputs.map((o, i) => {
+    const labels = ['AGENT 1 — WEEKEND SALES RECAP','AGENT 2 — DAILY SPECIALS CAPTION','AGENT 3 — REVIEW REPLY DRAFT','AGENT 4 — STAFF BRIEFING NOTE'];
+    return `${'═'.repeat(50)}\n${labels[i]}\n${'═'.repeat(50)}\n${o}`;
+  }).join('\n\n');
+  const btn = g('copyAllBtn');
+  try {
+    await navigator.clipboard.writeText(full);
+    btn.textContent = 'copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'copy full briefing'; btn.classList.remove('copied'); }, 2500);
+  } catch(e) { btn.textContent = 'error'; }
+}
+
+// ── Main runner
+let running = false;
+
+async function runPipeline() {
+  if (running) return;
+  running = true;
+  const btn = g('runBtn');
+  btn.disabled = true;
+  g('summary').classList.remove('show');
+
+  const d = getInputs();
+  outputs = ['','','',''];
+
+  // Reset
+  for (let i = 0; i < 4; i++) {
+    g(`step-${i}`).className = 'step waiting';
+    g(`status-${i}`).textContent = 'waiting';
+    g(`output-${i}`).textContent = '';
+    g(`prog-${i}`).style.width = '0%';
+    const c = g(`conn-${i}`);
+    if (c) c.classList.remove('lit');
+  }
+
+  const steps = [
+    { fn: salesOutput,   label: 'reading POS data…',   speed: 6,  dur: 2200 },
+    { fn: captionOutput, label: 'writing caption…',    speed: 14, dur: 2800 },
+    { fn: reviewOutput,  label: 'scanning reviews…',   speed: 8,  dur: 2000 },
+    { fn: staffOutput,   label: 'drafting note…',      speed: 10, dur: 3000 },
+  ];
+
+  for (let i = 0; i < 4; i++) {
+    const stepEl   = g(`step-${i}`);
+    const statusEl = g(`status-${i}`);
+    const outputEl = g(`output-${i}`);
+
+    stepEl.className = 'step active';
+    statusEl.textContent = steps[i].label;
+    stepEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    await sleep(300);
+
+    const text = steps[i].fn(d);
+    outputs[i] = text;
+
+    // Run progress + typewriter in parallel
+    await Promise.all([
+      runProgress(i, steps[i].dur),
+      typeText(outputEl, text, steps[i].speed)
+    ]);
+
+    stepEl.className = 'step done';
+    statusEl.textContent = 'done ✓';
+    const c = g(`conn-${i}`);
+    if (c) c.classList.add('lit');
+    await sleep(250);
+  }
+
+  // Timestamp
+  const now = new Date();
+  g('ts').textContent = `Briefing generated ${now.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})} at ${now.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}`;
+
+  g('summary').classList.add('show');
+  btn.disabled = false;
+  btn.innerHTML = '<span class="btn-icon">↺</span> Run Again';
+  running = false;
+ 
+</script>
+</body>
+</html>
