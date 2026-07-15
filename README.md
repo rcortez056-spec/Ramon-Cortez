@@ -64,7 +64,7 @@ You can view the active Claude system design, interactive variables, and structu
 An interactive, browser-native 3D simulation visualizing real-time data pipelining, node communication, and state sync across enterprise platforms.
 
 * **Claude 3D Visualizer Artifact:** https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00
-* 
+  
 * ### 📬 Connect With Me
 Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
