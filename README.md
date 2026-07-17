@@ -54,7 +54,7 @@ You can view the active Claude system design, interactive variables, and structu
 ### 🛠️ Technical Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
-*   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycastin
+*   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycasting
 
 * **Claude System Artifact:** https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2
 
@@ -64,8 +64,28 @@ You can view the active Claude system design, interactive variables, and structu
 An interactive, browser-native 3D simulation visualizing real-time data pipelining, node communication, and state sync across enterprise platforms.
 
 * **Claude 3D Visualizer Artifact:** https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00
-  
-* ### 📬 Connect With Me
+  ## 🛠️ Production-Ready AI Automation Architecture
+
+Here are live, interactive demonstration environments that show enterprise-grade orchestration pipelines, resilient system design, and high-converting revenue infrastructure.
+
+---
+
+### 🎛️ 1. Automation Systems Command Center
+A central cockpit visualizing multi-workflow orchestration, real-time system health, and self-healing error recovery protocols for service-based businesses.
+
+* **Core Focus:** Operational control, scalability, system resilience, and cross-platform integrations.
+* **Key Architecture:** Parallel workflow loops, auto-routing decision logic, and sub-250ms processing latency.
+* **Live Demo:** [View Live Command Center Center 🚀](https://ramon-command-center.netlify.app)
+
+---
+
+### 🌡️ 2. AI Lead Follow-Up Agent
+A high-impact revenue engine tracking active client acquisition pipelines, automated lead scoring, and multi-touch sequencing.
+
+* **Core Focus:** Multi-channel conversational outreach (Email, SMS, LinkedIn), sales pipeline speed, and conversion tracking.
+* **Key Architecture:** Dynamic lead qualification, predictive enrichment math, and live business ROI modeling.
+* **Live Demo:** [View Live Lead Agent 🚀](https://ramon-lead-agent.netlify.app)
+ ### 📬 Connect With Me
 Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
 *   **Credly Portfolio:** https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly
