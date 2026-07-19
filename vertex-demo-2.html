@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Architecture - Animated Intro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        #canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .branding {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .branding.show {
+            opacity: 1;
+        }
+
+        .branding h1 {
+            font-size: 32px;
+            color: #C9A96E;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .branding p {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .top-branding {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .top-branding.show {
+            opacity: 1;
+        }
+
+        .top-branding h2 {
+            font-size: 14px;
+            color: #C9A96E;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div class="container">
+        <div class="top-branding" id="top-branding">
+            <h2>Building Production-Grade AI Infrastructure</h2>
+        </div>
+        
+        <div class="branding" id="branding">
+            <h1>VERTEX ARCHITECTURE</h1>
+            <p>Orchestration • Pipelines • Automation</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // 3D vertices data
+        const vertices = [
+            // Core cube
+            [-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
+            [-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1],
+            // Extended points
+            [0, -2, 0], [0, 2, 0], [-2, 0, 0], [2, 0, 0], [0, 0, -2], [0, 0, 2]
+        ];
+
+        // Edges connecting vertices
+        const edges = [
+            // Cube edges
+            [0, 1], [1, 2], [2, 3], [3, 0],
+            [4, 5], [5, 6], [6, 7], [7, 4],
+            [0, 4], [1, 5], [2, 6], [3, 7],
+            // Extended edges
+            [0, 8], [1, 8], [4, 8],
+            [2, 9], [3, 9], [6, 9],
+            [0, 10], [3, 10], [4, 10], [7, 10],
+            [1, 11], [2, 11], [5, 11], [6, 11],
+            [0, 12], [1, 12], [2, 12], [3, 12],
+            [4, 13], [5, 13], [6, 13], [7, 13]
+        ];
+
+        let rotationX = 0;
+        let rotationY = 0;
+        let rotationZ = 0;
+        let time = 0;
+
+        function rotateX(point, angle) {
+            const cos = Math.cos(angle);
+            const sin = Math.sin(angle);
+            return [
+                point[0],
+                point[1] * cos - point[2] * sin,
+                point[1] * sin + point[2] * cos
+            ];
+        }
+
+        function rotateY(point, angle) {
+            const cos = Math.cos(angle);
+            const sin = Math.sin(angle);
+            return [
+                point[0] * cos + point[2] * sin,
+                point[1],
+                -point[0] * sin + point[2] * cos
+            ];
+        }
+
+        function rotateZ(point, angle) {
+            const cos = Math.cos(angle);
+            const sin = Math.sin(angle);
+            return [
+                point[0] * cos - point[1] * sin,
+                point[0] * sin + point[1] * cos,
+                point[2]
+            ];
+        }
+
+        function project(point, scale) {
+            const distance = 5 + point[2];
+            const x = (point[0] * scale) / distance;
+            const y = (point[1] * scale) / distance;
+            return [x, y, distance];
+        }
+
+        function drawFrame() {
+            // Clear canvas
+            ctx.fillStyle = 'rgba(15, 15, 15, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Update rotation
+            rotationX += 0.003;
+            rotationY += 0.005;
+            rotationZ += 0.002;
+            time += 0.016;
+
+            // Transform and project vertices
+            const projectedVertices = vertices.map(v => {
+                let point = [...v];
+                point = rotateX(point, rotationX);
+                point = rotateY(point, rotationY);
+                point = rotateZ(point, rotationZ);
+                
+                const projected = project(point, 200);
+                return {
+                    x: canvas.width / 2 + projected[0],
+                    y: canvas.height / 2 + projected[1],
+                    z: projected[2]
+                };
+            });
+
+            // Sort edges by average depth (painter's algorithm)
+            const edgesWithDepth = edges.map(edge => ({
+                edge,
+                depth: (projectedVertices[edge[0]].z + projectedVertices[edge[1]].z) / 2
+            }));
+            edgesWithDepth.sort((a, b) => a.depth - b.depth);
+
+            // Draw edges
+            edgesWithDepth.forEach((item, index) => {
+                const [i, j] = item.edge;
+                const v1 = projectedVertices[i];
+                const v2 = projectedVertices[j];
+
+                // Color based on depth and animation
+                const depthRatio = (item.depth + 5) / 10;
+                const animPulse = Math.sin(time + index * 0.2) * 0.5 + 0.5;
+
+                // Gold gradient effect
+                const hue = 39; // Gold hue
+                const saturation = 50;
+                const lightness = 50 + depthRatio * 20;
+                
+                ctx.strokeStyle = `hsla(${hue}, ${saturation}%, ${lightness}%, ${0.4 + animPulse * 0.3})`;
+                ctx.lineWidth = 1.5 + depthRatio * 1;
+
+                ctx.beginPath();
+                ctx.moveTo(v1.x, v1.y);
+                ctx.lineTo(v2.x, v2.y);
+                ctx.stroke();
+            });
+
+            // Draw vertices
+            projectedVertices.forEach((v, index) => {
+                const depthRatio = (v.z + 5) / 10;
+                const size = 2 + depthRatio * 3;
+
+                // Vertex glow
+                ctx.fillStyle = `rgba(201, 169, 110, ${0.6 * depthRatio})`;
+                ctx.beginPath();
+                ctx.arc(v.x, v.y, size * 1.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Vertex core
+                ctx.fillStyle = '#C9A96E';
+                ctx.beginPath();
+                ctx.arc(v.x, v.y, size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Show branding after animation starts
+            if (time > 1) {
+                document.getElementById('top-branding').classList.add('show');
+            }
+            if (time > 3) {
+                document.getElementById('branding').classList.add('show');
+            }
+
+            requestAnimationFrame(drawFrame);
+        }
+
+        drawFrame();
+    </script>
+</body>
+</html>
