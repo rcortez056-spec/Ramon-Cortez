@@ -46,7 +46,7 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 
 
 ### 🚀 Project 1: Live Workflow Logic & Architecture
-You can view the active Claude system design, interactive variables, and structured execution logic here:This blueprint models an autonomous data loop connecting three vital enterprise systems, handling fluid read/write events across the pipeline:
+You can view the active Claude system design, interactive variables, and structured execution logic here: This blueprint models an autonomous data loop connecting three vital enterprise systems, handling fluid read/write events across the pipeline:
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
@@ -90,7 +90,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 ### Immutable State Ledger & Multi-Agent Orchestration 
 ** Status:** Production-Ready | [View live demo](https://sentinel-1-ramon.netlify.app)
 
-** Status:** Production-Ready | [View Live Demo](https://immutable-2-ramon.netlify.app)
+** Status:** Production-Ready | [View Live Demo](https://immutable-3-ramon.netlify.app)
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
