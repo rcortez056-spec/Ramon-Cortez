@@ -92,7 +92,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 ** Status:** Production-Ready | [View Live Demo](https://immutable-2-ramon.netlify.app)
 
---- Let's discuss AI transformation, autonomous workflows, or system architecture:
+  Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
 *   **Credly Portfolio:** https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly
 *   **Inquiries:** Direct Message via LinkedIn
