@@ -96,6 +96,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 *   **LinkedIn:**  https://linkedin.com/in/ramon-cortez-a227a2112/
 *   **Credly Portfolio:** https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly
 *   **Inquiries:** Direct Message via LinkedIn
-
-*"Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
+  * **Get the B2B Cold Email Hook Generator:** https://payhip.com/b/YfTXw
+    
+  Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
 
