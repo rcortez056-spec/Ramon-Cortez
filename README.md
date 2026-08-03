@@ -36,7 +36,14 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 ---
 
 ### 📈 Credentials & Certifications
-I am committed to deep, continuous learning in artificial intelligence engineering and ethical frameworks. My verified professional credentials include:
+I am committed to deep, continuous learning in artificial intelligence engineering and ethical frameworks. My verified professional credentials include:### 🎓 Verified Certifications
+
+* **Microsoft Certified Azure AI Engineer Associate (AI-102)**  
+  [Azure AI Engineer Associate](https://www.coursera.org/account/accomplishments/verify/M7TW27G1HF2F
+
+* **IBM Introduction to Systems Architecture**  
+  [IBM Systems Architecture](https://www.coursera.org/account/accomplishments/verify/FZFL97ME6SEZ
+
 *   **IBM:** Professional AI Foundations & Skill Build Certifications
 *   **Microsoft:** Azure AI Fundamentals & System Certifications
 *   **Google:** Advanced Generative AI & Cloud Architecture Portfolios
