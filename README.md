@@ -7,7 +7,20 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 ---
 
 # Hi there, I'm Ramón Cortez 👋
+# Ramon Cortez | AI Solutions Architect
 
+Scaling service-based businesses with custom multi-agent workflows built natively on Relevance AI.
+
+### ⚡ Commercial Offers
+* 🚀 **[Express AI Architecture Sprint ($997)](https://ramoncortezai.com/b/9ZDH2)** — Custom multi-agent pipeline designed and deployed in 72 hours.
+* 🛠️ **[Agent Infrastructure Maintenance ($297/mo)](https://ramoncortezai.com/b/VToWb)** — Proactive API monitoring, prompt calibration, and system optimization.
+
+---
+
+### 📚 Tech Stack
+* **Orchestration:** Relevance AI
+* **Knowledge Bases:** NotebookLM
+* **Publishing:** Substack | Dev.to | GitHub
 ### 🛠️ Core Expertise & Ecosystem
 *   **AI Architecture:** Agentic RAG Pipelines, Autonomous Workforces, Multi-Agent Orchestration
 *   **No-Code/Low-Code AI Platforms:** Relevance AI, Claude (Anthropic), Gemini (Google)
