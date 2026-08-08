@@ -14,7 +14,7 @@ Scaling service-based businesses with custom multi-agent workflows built nativel
 ### ⚡ Commercial Offers
 * 🚀 **[Express AI Architecture Sprint ($997)](https://ramoncortezai.com/b/9ZDH2)** — Custom multi-agent pipeline designed and deployed in 72 hours.
 * 🛠️ **[Agent Infrastructure Maintenance ($297/mo)](https://ramoncortezai.com/b/VToWb)** — Proactive API monitoring, prompt calibration, and system optimization.
-
+* 📦 **[Production Agent Schema Packs ($47–$97)](https://ramoncortezai.com/b/tJSs7)** — Instant downloadable JSON blueprints & production workflows.
 ---
 
 ### 📚 Tech Stack
