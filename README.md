@@ -7,7 +7,7 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 ---
 
 # Hi there, I'm Ramón Cortez 👋
-# Ramon Cortez | AI Solutions Architect
+
 
 Scaling service-based businesses with custom multi-agent workflows built natively on Relevance AI.
 
