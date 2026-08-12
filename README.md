@@ -74,14 +74,14 @@ You can view the active Claude system design, interactive variables, and structu
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
 *   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycasting
 
-* **Claude System Artifact:** https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2
+* **[Claude System Artifact](https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2)
 
 ---
 
 ### 🌐 Project 2: 3D Data Orchestration Engine (Live Automation Workflow)
 An interactive, browser-native 3D simulation visualizing real-time data pipelining, node communication, and state sync across enterprise platforms.
 
-* **Claude 3D Visualizer Artifact:** https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00
+* **[Claude 3D Visualizer Artifact](https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00)
   ## 🛠️ Production-Ready AI Automation Architecture
 
 Here are live, interactive demonstration environments that show enterprise-grade orchestration pipelines, resilient system design, and high-converting revenue infrastructure.
