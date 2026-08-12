@@ -74,7 +74,7 @@ You can view the active Claude system design, interactive variables, and structu
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
 *   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycasting
 
-* **[Claude System Artifact](https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2)**
+* **[Claude System Artifact](https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2)
 
 ---
 
