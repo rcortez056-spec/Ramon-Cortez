@@ -106,13 +106,16 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
  ### 📬 Connect With Me
 # Production AI Infrastructure: Truth Engine
 ### Immutable State Ledger & Multi-Agent Orchestration 
-**Status:** Production-Ready | [View live demo](https://sentinel-1-ramon.netlify.app)
+**Status:** Production-Ready | [View live Demo](https://sentinel-1-ramon.netlify.app)
 
 **Status:** Production-Ready | [View Live Demo](https://immutable-3-ramon.netlify.app)
 
 EMAIL THREAT DETECTION & RESPONSE PIPELINE
 5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
-**Status:** Production-ready | [view Live Demo](https://ramon-email-threat.netlify.app)
+**Status:** Production-Ready | [view Live Demo](https://ramon-email-threat.netlify.app)
+🔐 LinkedIn Content Security Audit
+Real-time scanning for exposed credentials, API keys, and secrets before publishing
+**Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)
