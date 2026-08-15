@@ -110,6 +110,10 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 **Status:** Production-Ready | [View Live Demo](https://immutable-3-ramon.netlify.app)
 
+EMAIL THREAT DETECTION & RESPONSE PIPELINE
+5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
+**Status:** Production-ready | [view Live Demo](https://ramon-email-threat.netlify.app)
+
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly)
