@@ -36,7 +36,7 @@ Scaling service-based businesses with custom multi-agent workflows built nativel
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
 *   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
 *   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.### ⚙️ Core Architecture Visualized
-*   
+    
 
 
 #### 🔄 2. Relevance AI Autonomous Workforces
