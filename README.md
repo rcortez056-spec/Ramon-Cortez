@@ -12,7 +12,7 @@ I design and deploy production-ready AI automation workflows, intelligent agents
 Scaling service-based businesses with custom multi-agent workflows built natively on Relevance AI.
 
 ### ⚡ Commercial Offers
-* 🚀   [High-Ticket Agent Blueprints](https://store.ramoncortezai.com/collection/enterprise-ai-agents) — Custom enterprise multi-agent systems & production workforces.
+* 🚀   **[High-Ticket Agent Blueprints](https://store.ramoncortezai.com/collection/enterprise-ai-agents)** — Custom enterprise multi-agent systems & production workforces.
 * 🚀  Express AI Architecture Sprint ($997) — Custom multi-agent pipeline designed and deployed in 72 hours.
 * 🛠️  Agent Infrastructure Maintenance ($297/mo) — Proactive API monitoring, prompt calibration, and system optimization.
 * 📦  Production Agent Schema Packs ($47–$97) — Instant downloadable JSON blueprints & production workflows.
