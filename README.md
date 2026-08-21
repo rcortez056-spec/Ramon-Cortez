@@ -57,7 +57,13 @@ For businesses looking to integrate automated lead intake, qualification engines
 
 ### 🚀 Featured Frameworks & Projects
 *(Below are the architectural blueprints and integrations powering my autonomous workflows)*
+---
 
+### 🧠 Architectural Case Study: Optimizing LLM Routing
+* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost. 
+* **The Blueprint:** 
+  1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
+  2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
 *   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
 *   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.### ⚙️ Core Architecture Visualized
