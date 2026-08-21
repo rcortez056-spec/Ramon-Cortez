@@ -22,7 +22,6 @@ Scaling service-based businesses with custom multi-agent workflows built nativel
 Building production-grade, custom AI automation systems and multi-agent pipelines for high-value industries (Restaurants, Dental, Finance, and Real Estate). Not templates. Not prompts. Infrastructure.
 
 ---
-
 ### Engineering Standards
 Every system is engineered with:
 - **Immutable State Management:** Zero data collisions.
@@ -31,14 +30,12 @@ Every system is engineered with:
 - **Performance Monitoring:** Built-in metrics and analytics.
 
 ---
-
 ### Live Proof & Architecture
 * **Interactive Demo:** Test the multi-agent pipeline live in your browser at [Ramon Pipeline Demo](https://ramon-pipeline-demo.netlify.app).
 * **System Architecture:** Review the structural design via the [Diagram Architecture](https://github.com/rcortez056-spec/Ramon-Cortez).
 * **Production Code:** Inspect the orchestration engine and agent classes in the [GitHub Repository](https://github.com/rcortez056-spec/Ramon-Cortez).
 
 ---
-
 ### Enterprise Engagement
 For businesses looking to integrate automated lead intake, qualification engines, and custom software routing:
 
