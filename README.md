@@ -99,7 +99,7 @@ You can view the active Claude system design, interactive variables, and structu
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
-*    ## 🛠️ Technical ------
+*    ## 🛠️ Technical 
 *   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
@@ -120,7 +120,7 @@ Here are live, interactive demonstration environments that show enterprise-grade
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
-A central cockpit visualizing multi-workflow orchestration, real-time system health, and self-healing error recovery protocols for service-based businesses.
+A central cockpit that visualizes multi-workflow orchestration, real-time system health, and self-healing error-recovery protocols for service-based businesses.
 
 * **Core Focus:** Operational control, scalability, system resilience, and cross-platform integrations.
 * **Key Architecture:** Parallel workflow loops, auto-routing decision logic, and sub-250ms processing latency.
