@@ -38,7 +38,6 @@ Every system is engineered with:
 ---
 ### Enterprise Engagement
 For businesses looking to integrate automated lead intake, qualification engines, and custom software routing:
-
 * [Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0)(Includes Phase 1 setup specs, $2,000 deployment structure, and scaling retainers).
 ### 📚 Tech Stack
 * **Orchestration:** Relevance AI
@@ -63,7 +62,7 @@ For businesses looking to integrate automated lead intake, qualification engines
   2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
 *   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
-*   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.### ⚙️ Core Architecture Visualized
+*   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.⚙️ Core Architecture Visualized
     
 
 
