@@ -91,9 +91,6 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 * **IBM Introduction to Systems Architecture** — [Verify Certificate](https://www.coursera.org/account/accomplishments/verify/FZFL97ME6SEZ)
 * **Google:** Advanced Generative AI & Cloud Architecture Portfolios
 * **Core Competencies:** Enterprise Systems Architecture, Generative AI Literacy, System Safety, and Ethical AI Design
-
-
-
 ---
 
 
@@ -102,7 +99,13 @@ You can view the active Claude system design, interactive variables, and structu
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
+---
 
+### 🧠 Architectural Case Study: Optimizing LLM Routing
+* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost. 
+* **The Blueprint:** 
+  1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
+  2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
 ### 🛠️ Technical Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
