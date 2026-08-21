@@ -98,15 +98,8 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 You can view the active Claude system design, interactive variables, and structured execution logic here: This blueprint models an autonomous data loop connecting three vital enterprise systems, handling fluid read/write events across the pipeline:
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
-*   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
----
-
-### 🧠 Architectural Case Study: Optimizing LLM Routing
-* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost. 
-* **The Blueprint:** 
-  1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
-  2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
-### 🛠️ Technical Implementation Details
+*   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment  ## 🛠️ Technical ------
+*   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
 *   **Animation Dynamics:** Vector mathematical models handle floating node state modifications and real-time cursor raycasting
