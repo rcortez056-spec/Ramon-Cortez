@@ -98,7 +98,8 @@ I am committed to deep, continuous learning in artificial intelligence engineeri
 You can view the active Claude system design, interactive variables, and structured execution logic here: This blueprint models an autonomous data loop connecting three vital enterprise systems, handling fluid read/write events across the pipeline:
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
-*   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment  ## 🛠️ Technical ------
+*   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
+*    ## 🛠️ Technical ------
 *   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
 *   **Shading & Assets:** Zero external dependencies. Uses canvas-generated radial light textures, dynamic wireframe cages, and procedural starfield particles.
@@ -109,7 +110,7 @@ You can view the active Claude system design, interactive variables, and structu
 ---
 
 ### 🌐 Project 2: 3D Data Orchestration Engine (Live Automation Workflow)
-An interactive, browser-native 3D simulation visualizing real-time data pipelining, node communication, and state sync across enterprise platforms.
+An interactive, browser-native 3D simulation that visualizes real-time data pipelining, node communication, and state synchronization across enterprise platforms.
 
 * **Claude 3D Visualizer Artifact:** [Live demo](https://claude.ai/public/artifacts/8630c0c5-edd4-4de3-9440-d3d2a71a2d00)
   ## 🛠️ Production-Ready AI Automation Architecture
