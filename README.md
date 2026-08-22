@@ -167,7 +167,7 @@ EMAIL THREAT DETECTION & RESPONSE PIPELINE
 5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
 **Status:** Production-Ready | [View Live Demo](https://ramon-email-threat.netlify.app)
 
-Autonomous inbound response router featuring programmatic fail-safe gateways and credential payload dispatch. Review the technical blueprint and deployment scope: 
+Live demo of a deterministic Fail-Safe Gateway designed to catch bad payloads, prevent API timeouts, and secure agent workflows:
 **Status:** Production- Ready | [View Live Demo](https://ramon-fail-safe.netlify.app)
 
 🔐 **LinkedIn Content Security Audit**
