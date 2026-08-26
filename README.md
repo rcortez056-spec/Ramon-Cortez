@@ -60,6 +60,7 @@ For businesses looking to integrate automated lead intake, qualification engines
 * **The Blueprint:** 
   1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
   2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
+  3. **Event Orchestration Pipeline Router:** [Live Demo](https://claude.ai/public/artifacts/5e5ad745-1f0d-41b3-8890-aa5f6e270e95)
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
 *   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
 *   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.⚙️ Core Architecture Visualized
@@ -77,7 +78,7 @@ Autonomous Architectural Agent Blueprint
 System-Level Engineering for Real-World Infrastructure Bottlenecks
 
 Overview
-This repository contains production-grade architectural blueprints and low-code/no-code autonomous agent configurations designed to eliminate recurring engineering friction. Built for teams dealing with legacy data drift, brittle mapping layers, and manual break/fix maintenance cycles.
+This repository includes production-grade architectural blueprints and low-code/no-code autonomous agent configurations to reduce recurring engineering friction. Built for teams dealing with legacy data drift, brittle mapping layers, and manual break/fix maintenance cycles.
 
 Architectural Focus
 Schema-Aware Ingestion: Automatically detects, normalizes, and adapts to unexpected upstream payload changes without requiring constant script rewrites.
