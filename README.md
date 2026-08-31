@@ -76,7 +76,7 @@ For businesses looking to integrate automated lead intake, qualification engines
 *   **Key Features:** Automated webhook handling, payload transformation, and asynchronous background tasks.
    
 
-   * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com)** — Complete enterprise infrastructure package featuring tiered Haiku/Opus error-recovery, Docker/Kubernetes configs, and production security checklists. [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
+   * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com/b/OyMsg)** — Complete enterprise infrastructure package featuring tiered Haiku/Opus error-recovery, Docker/Kubernetes configs, and production security checklists. [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
    
   
 ### Overview
