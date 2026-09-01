@@ -173,7 +173,8 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 * **Bi-Directional Request-Response Dispatcher**
   * *Human-in-the-Loop state machine pausing execution for explicit authorization.*
-  * **Status:** Production-Ready | [View Live Demo](/)
+  * **Status:** Production-Ready | [View Live Demo](https://rcortez056-spec.github.io/two-way-dispatcher/)
+    
 EMAIL THREAT DETECTION & RESPONSE PIPELINE
 5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
 **Status:** Production-Ready | [View Live Demo](https://ramon-email-threat.netlify.app)
