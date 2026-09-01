@@ -178,6 +178,9 @@ Real-time scanning for exposed credentials, API keys, and secrets before publish
 
 **Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
+VERTEX ARCHITECTURE Orchestration • Pipelines • Automation
+**Status:** Production-Grade AI Infrastructure | [View Live Demo](https://vertex-ramon.netlify.app)
+
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly)
