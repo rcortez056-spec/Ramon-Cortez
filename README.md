@@ -165,7 +165,15 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 **Status:** Production-Ready | [View Live Demo](https://sentinel-1-ramon.netlify.app)
 
 **Status:** Production-Ready | [View Live Demo](https://immutable-3-ramon.netlify.app)
+### 🚀 Production-Grade Agent Architecture Demos
 
+* **Self-Healing Incident Orchestration Engine**
+  * *Dynamic schema patching, deterministic error handling, and automated SLA recovery.*
+  * **Status:** Production-Ready | [View Live Demo](https://rcortez056-spec.github.io/incident-orchestration-demo/)
+
+* **Bi-Directional Request-Response Dispatcher**
+  * *Human-in-the-Loop state machine pausing execution for explicit authorization.*
+  * **Status:** Production-Ready | [View Live Demo](https://rcortez056-spec.github.io/two-way-dispatcher/)
 EMAIL THREAT DETECTION & RESPONSE PIPELINE
 5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
 **Status:** Production-Ready | [View Live Demo](https://ramon-email-threat.netlify.app)
