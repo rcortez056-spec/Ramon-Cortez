@@ -109,6 +109,7 @@ Engineered and maintained by Ramon Cortez. Focused on building autonomous agent 
 
 I am committed to deep, continuous learning in artificial intelligence engineering and ethical frameworks. My verified credentials include:
 
+* **NVIDIA AI Infrastructure and Operations Fundamentals** -[Verify certificate](https://www.coursera.org/account/accomplishments/verify/P2DS00TE63A0)
 * **IBM Introduction to Software Engineering** - [Verify Certificate](https://www.coursera.org/account/accomplishments/verify/GR4XC4WK1NGY)
 * **Microsoft Learn** - [Verify Certificate ](https://learn.microsoft.com/en-us/users/ramoncortez-8086/achievements)
 * **Google Cloud** - [Verify Certificate](https://www.skills.google/public_profiles/d2d889be-84a1-40c6-b3e0-19d250a943ea)
