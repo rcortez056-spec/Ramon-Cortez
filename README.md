@@ -76,7 +76,7 @@ For businesses looking to integrate automated lead intake, qualification engines
 *   **Key Features:** Automated webhook handling, payload transformation, and asynchronous background tasks.
    
 
-   * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com/b/OyMsg)** — Complete enterprise infrastructure package featuring tiered Haiku/Opus error-recovery, Docker/Kubernetes configs, and production security checklists. [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
+   * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com/b/OyMsg)** — Complete enterprise infrastructure package featuring tiered Haiku/Opus error recovery, Docker/Kubernetes configs, and production security checklists. [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
    
   
 ### Overview
@@ -109,7 +109,7 @@ Engineered and maintained by Ramon Cortez. Focused on building autonomous agent 
 
 I am committed to deep, continuous learning in artificial intelligence engineering and ethical frameworks. My verified credentials include:
 
-* **NVIDIA AI Infrastructure and Operations Fundamentals** -[Verify certificate](https://www.coursera.org/account/accomplishments/verify/P2DS00TE63A0)
+* **NVIDIA AI Infrastructure and Operations Fundamentals** -[Verify Certificate](https://www.coursera.org/account/accomplishments/verify/P2DS00TE63A0)
 * **IBM Introduction to Software Engineering** - [Verify Certificate](https://www.coursera.org/account/accomplishments/verify/GR4XC4WK1NGY)
 * **Microsoft Learn** - [Verify Certificate ](https://learn.microsoft.com/en-us/users/ramoncortez-8086/achievements)
 * **Google Cloud** - [Verify Certificate](https://www.skills.google/public_profiles/d2d889be-84a1-40c6-b3e0-19d250a943ea)
