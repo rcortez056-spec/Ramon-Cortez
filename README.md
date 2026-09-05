@@ -173,10 +173,9 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
   * **Status:** Production-Ready | [View Live Demo](https://rcortez056-spec.github.io/two-way-dispatcher/)
     
 
-* **Email Threat Detection & Response Pipeline:** 5-Node Security Orchestration • Escalation & Compliance Routing — [View Live Demo](https://ramon-email-threat.netlify.app)
+* **Email Threat Detection & Response Pipeline:** 5-Node Security Orchestration • Escalation & Compliance Routing - [View Live Demo](https://ramon-email-threat.netlify.app)
 
 * **Deterministic Fail-Safe Gateway:** Catches bad payloads, prevents API timeouts, and secures downstream agent workflows.
-
 * **Status:** Production- Ready | [View Live Demo](https://ramon-fail-safe.netlify.app)
 
 🔐 **LinkedIn Content Security Audit**
@@ -188,9 +187,9 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
-*   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) — Verified technical credentials
+*   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) - Verified technical credentials
   
-* **Storefront:** [Visit Store](https://store.ramoncortezai.com) — Architecture blueprints & deployment packages
+* **Storefront:** [Visit Store](https://store.ramoncortezai.com) - Architecture blueprints & deployment packages
   
     
   Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
