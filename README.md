@@ -36,10 +36,6 @@ Every system is engineered with:
 - **Performance Monitoring:** Built-in metrics and analytics.
 
 ---
-### Live Proof & Architecture
-* **Interactive Demo:** Test the multi-agent pipeline live in your browser at [Ramon Pipeline Demo](https://ramon-pipeline-demo.netlify.app).
-* **System Architecture:** Review the structural design via the [Diagram Architecture](https://github.com/rcortez056-spec/Ramon-Cortez).
-* **Production Code:** Inspect the orchestration engine and agent classes in the [GitHub Repository](https://github.com/rcortez056-spec/Ramon-Cortez).
 
 ---
 ### Enterprise Engagement
