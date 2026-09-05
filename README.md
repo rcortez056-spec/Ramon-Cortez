@@ -96,9 +96,7 @@ This repository provides production-grade architectural blueprints and low-code/
 
 ---
 
-### Production Blueprints & Packages
-* **Standard Build:** Foundational low-code agent systems built for targeted protocol handling.
-* **Advanced Production Grade ($99):** Fully tested, multi-layered architectural blueprints optimized for high-volume orchestration and enterprise reliability.
+
 
 Professional Services
 Engineered and maintained by Ramon Cortez. Focused on building autonomous agent workflows and knowledge bases for production environments through an inbound, architecture-first model.
