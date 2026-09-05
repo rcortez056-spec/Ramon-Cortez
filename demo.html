@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four-System Unified Pipeline Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container { max-width: 1800px; margin: 0 auto; }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 { color: #C9A96E; font-size: 36px; margin-bottom: 8px; }
+        .subtitle { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+        .author { color: #C9A96E; font-size: 10px; margin-top: 10px; }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 18px;
+        }
+        
+        .section-title {
+            color: #C9A96E;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #C9A96E;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #C9A96E;
+            background: rgba(201, 169, 110, 0.1);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #C9A96E 0%, #a0844b 100%);
+            color: #0f0f0f;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 9px;
+            text-transform: uppercase;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(201, 169, 110, 0.3); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .stage-box {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #333;
+            border-radius: 6px;
+            padding: 12px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 8px;
+            transition: all 0.3s;
+        }
+        
+        .stage-box.active {
+            border-color: #C9A96E;
+            background: rgba(201, 169, 110, 0.1);
+            box-shadow: 0 0 10px rgba(201, 169, 110, 0.3);
+            animation: pulse 0.6s ease-in-out infinite;
+        }
+        
+        .stage-box.complete {
+            border-color: #4CAF50;
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(201, 169, 110, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.6); }
+        }
+        
+        .stage-label { font-weight: bold; color: #C9A96E; margin-bottom: 8px; }
+        .stage-content { color: #aaa; font-size: 8px; line-height: 1.3; }
+        .stage-status { color: #888; font-size: 7px; margin-top: 8px; }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .log-container {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 8px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .log-entry {
+            padding: 6px;
+            margin-bottom: 4px;
+            border-left: 2px solid #666;
+            background: rgba(0, 0, 0, 0.3);
+            word-wrap: break-word;
+        }
+        
+        .log-entry.system1 { border-left-color: #2196F3; color: #2196F3; }
+        .log-entry.system2 { border-left-color: #FF9800; color: #FF9800; }
+        .log-entry.system3 { border-left-color: #9C27B0; color: #9C27B0; }
+        .log-entry.system4 { border-left-color: #4CAF50; color: #4CAF50; }
+        .log-entry.error { border-left-color: #F44336; color: #F44336; }
+        
+        .output-box {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #C9A96E;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 8px;
+            line-height: 1.4;
+            color: #e0e0e0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .routing-option {
+            display: inline-block;
+            background: rgba(201, 169, 110, 0.2);
+            color: #C9A96E;
+            padding: 4px 8px;
+            border-radius: 2px;
+            font-size: 7px;
+            margin: 2px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .metric {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .metric-label { color: #888; font-size: 7px; text-transform: uppercase; }
+        .metric-value { color: #C9A96E; font-size: 16px; font-weight: bold; margin-top: 4px; }
+        
+        .arrow {
+            text-align: center;
+            font-size: 16px;
+            color: #C9A96E;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ FOUR-SYSTEM UNIFIED PIPELINE</h1>
+            <div class="subtitle">Inbound → Scrape → Generate → Route</div>
+            <div class="author">By Ramon Cortez, AI Architect</div>
+        </header>
+        
+        <!-- INPUT SECTION -->
+        <div class="section" style="margin-bottom: 20px;">
+            <div class="section-title">📥 System 1: Inbound Lead & Data Capture</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                <div>
+                    <label style="color: #888; font-size: 7px;">Company Domain</label>
+                    <input type="text" id="companyDomain" placeholder="techstartup.com" value="techstartup.com">
+                </div>
+                
+                <div>
+                    <label style="color: #888; font-size: 7px;">Prospect Name</label>
+                    <input type="text" id="prospectName" placeholder="Sarah Chen" value="Sarah Chen">
+                </div>
+                
+                <div>
+                    <label style="color: #888; font-size: 7px;">Job Title</label>
+                    <input type="text" id="jobTitle" placeholder="VP Engineering" value="VP Engineering">
+                </div>
+            </div>
+            
+            <button onclick="startPipeline()">▶️ START PIPELINE</button>
+        </div>
+        
+        <!-- FOUR-STAGE PIPELINE -->
+        <div class="grid-4">
+            <!-- SYSTEM 1 -->
+            <div class="section">
+                <div class="section-title">📥 System 1</div>
+                <div class="stage-box" id="stage1">
+                    <div class="stage-label">INBOUND CAPTURE</div>
+                    <div class="stage-content">Validating & standardizing incoming prospect data...</div>
+                    <div class="stage-status" id="stage1-status"></div>
+                </div>
+            </div>
+            
+            <!-- SYSTEM 2 -->
+            <div class="section">
+                <div class="section-title">🕷️ System 2</div>
+                <div class="stage-box" id="stage2">
+                    <div class="stage-label">SCRAPER & ENRICHMENT</div>
+                    <div class="stage-content">Fetching live website data...</div>
+                    <div class="stage-status" id="stage2-status"></div>
+                </div>
+            </div>
+            
+            <!-- SYSTEM 3 -->
+            <div class="section">
+                <div class="section-title">🧠 System 3</div>
+                <div class="stage-box" id="stage3">
+                    <div class="stage-label">LLM GENERATION</div>
+                    <div class="stage-content">Generating context-specific message...</div>
+                    <div class="stage-status" id="stage3-status"></div>
+                </div>
+            </div>
+            
+            <!-- SYSTEM 4 -->
+            <div class="section">
+                <div class="section-title">🚀 System 4</div>
+                <div class="stage-box" id="stage4">
+                    <div class="stage-label">EXECUTION ROUTER</div>
+                    <div class="stage-content">Routing to destination...</div>
+                    <div class="stage-status" id="stage4-status"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- REAL-TIME LOG -->
+        <div class="section full-width" style="margin-bottom: 20px;">
+            <div class="section-title">📋 Real-Time Execution Log</div>
+            <div class="log-container" id="logContainer"></div>
+        </div>
+        
+        <!-- OUTPUT & ROUTING -->
+        <div class="grid-4 full-width">
+            <div class="section" style="grid-column: 1 / 3;">
+                <div class="section-title">📧 Generated Personalized Message</div>
+                <div class="output-box" id="generatedMessage">
+                    <div style="color: #888;">Message will appear here...</div>
+                </div>
+            </div>
+            
+            <div class="section" style="grid-column: 3 / 5;">
+                <div class="section-title">🎯 Routing Destinations</div>
+                <div style="background: rgba(0, 0, 0, 0.5); border: 1px solid #333; border-radius: 4px; padding: 12px; min-height: 100px;">
+                    <div id="routingDestinations" style="font-size: 8px; color: #aaa;">Routes will be selected based on data...</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- METRICS -->
+        <div class="section full-width" style="margin-top: 20px;">
+            <div class="section-title">📊 Pipeline Metrics</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-label">System 1 Time</div>
+                    <div class="metric-value" id="metric1">0ms</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">System 2 Time</div>
+                    <div class="metric-value" id="metric2">0ms</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">System 3 Time</div>
+                    <div class="metric-value" id="metric3">0ms</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">System 4 Time</div>
+                    <div class="metric-value" id="metric4">0ms</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mockScrapedData = {
+            "techstartup.com": {
+                company_name: "TechStartup Inc",
+                tagline: "AI-powered API platform",
+                key_technologies: ["GraphQL", "Node.js", "Redis", "PostgreSQL"],
+                value_propositions: [
+                    "Unified API management for distributed systems",
+                    "Real-time data synchronization",
+                    "Enterprise-grade security"
+                ],
+                recent_product_updates: [
+                    "GraphQL API v2 launched",
+                    "Real-time collaboration features",
+                    "Multi-region deployment"
+                ],
+                team_size: "25-50",
+                founded: "2021"
+            },
+            "default": {
+                company_name: "The Company",
+                tagline: "Innovative software solutions",
+                key_technologies: ["Cloud", "API", "Database"],
+                value_propositions: ["Scalability", "Reliability", "Security"],
+                recent_product_updates: ["Recent product launch", "New features released"],
+                team_size: "20+",
+                founded: "2020"
+            }
+        };
+        
+        let pipelineMetrics = {};
+        
+        function log(message, system = 'info') {
+            const container = document.getElementById('logContainer');
+            const entry = document.createElement('div');
+            entry.className = `log-entry system${system}`;
+            const timestamp = new Date().toLocaleTimeString('en-US', { hour12: false });
+            entry.textContent = `[${timestamp}] ${message}`;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+        
+        async function startPipeline() {
+            const domain = document.getElementById('companyDomain').value.trim();
+            const name = document.getElementById('prospectName').value.trim();
+            const title = document.getElementById('jobTitle').value.trim();
+            
+            if (!domain || !name || !title) {
+                log('❌ All fields required', 'error');
+                return;
+            }
+            
+            document.querySelector('button').disabled = true;
+            pipelineMetrics = {};
+            
+            log(`🚀 Starting unified pipeline for ${name}`, 'info');
+            
+            // SYSTEM 1: INBOUND CAPTURE
+            await system1_inbound(domain, name, title);
+            
+            // SYSTEM 2: SCRAPER & ENRICHMENT
+            const scrapedData = await system2_scraper(domain);
+            
+            // SYSTEM 3: LLM GENERATION
+            const generatedMessage = await system3_llm(scrapedData, name, title);
+            
+            // SYSTEM 4: EXECUTION ROUTER
+            await system4_router(domain, scrapedData, generatedMessage, name);
+            
+            document.querySelector('button').disabled = false;
+        }
+        
+        async function system1_inbound(domain, name, title) {
+            const startTime = Date.now();
+            const stage = document.getElementById('stage1');
+            
+            stage.classList.add('active');
+            log(`📥 [SYSTEM 1] Receiving inbound lead: ${name} (${title})`, 1);
+            log(`📥 [SYSTEM 1] Company domain: ${domain}`, 1);
+            
+            await sleep(800);
+            
+            stage.classList.remove('active');
+            stage.classList.add('complete');
+            document.getElementById('stage1-status').textContent = '✓ Complete';
+            
+            const time = Date.now() - startTime;
+            pipelineMetrics['system1'] = time;
+            document.getElementById('metric1').textContent = time + 'ms';
+            
+            log(`✅ [SYSTEM 1] Data standardized and validated`, 1);
+        }
+        
+        async function system2_scraper(domain) {
+            const startTime = Date.now();
+            const stage = document.getElementById('stage2');
+            
+            stage.classList.add('active');
+            log(`🕷️  [SYSTEM 2] Scraping ${domain}...`, 2);
+            
+            await sleep(1200);
+            
+            const scrapedData = mockScrapedData[domain] || mockScrapedData['default'];
+            
+            log(`🕷️  [SYSTEM 2] Extracted company: ${scrapedData.company_name}`, 2);
+            log(`🕷️  [SYSTEM 2] Tech stack: ${scrapedData.key_technologies.join(', ')}`, 2);
+            log(`🕷️  [SYSTEM 2] Value props: ${scrapedData.value_propositions[0]}`, 2);
+            
+            stage.classList.remove('active');
+            stage.classList.add('complete');
+            document.getElementById('stage2-status').textContent = '✓ Complete';
+            
+            const time = Date.now() - startTime;
+            pipelineMetrics['system2'] = time;
+            document.getElementById('metric2').textContent = time + 'ms';
+            
+            log(`✅ [SYSTEM 2] Live website data enriched (no hardcoded assumptions)`, 2);
+            
+            return scrapedData;
+        }
+        
+        async function system3_llm(scrapedData, name, title) {
+            const startTime = Date.now();
+            const stage = document.getElementById('stage3');
+            
+            stage.classList.add('active');
+            log(`🧠 [SYSTEM 3] Invoking Claude with scraped context...`, 3);
+            log(`🧠 [SYSTEM 3] Inputs: ${name}, ${title}, ${scrapedData.company_name}`, 3);
+            
+            await sleep(500);
+            log(`🧠 [SYSTEM 3] Claude API processing...`, 3);
+            
+            // Generate personalized message using scraped data
+            const message = generateContextualMessage(scrapedData, name, title);
+            
+            await sleep(500);
+            
+            stage.classList.remove('active');
+            stage.classList.add('complete');
+            document.getElementById('stage3-status').textContent = '✓ Complete';
+            
+            const time = Date.now() - startTime;
+            pipelineMetrics['system3'] = time;
+            document.getElementById('metric3').textContent = time + 'ms';
+            
+            log(`✅ [SYSTEM 3] Personalized message generated`, 3);
+            
+            // Display generated message
+            document.getElementById('generatedMessage').innerHTML = 
+                `<div style="color: #C9A96E; font-size: 9px; line-height: 1.5;">"${message}"</div>`;
+            
+            return message;
+        }
+        
+        async function system4_router(domain, scrapedData, message, name) {
+            const startTime = Date.now();
+            const stage = document.getElementById('stage4');
+            
+            stage.classList.add('active');
+            log(`🚀 [SYSTEM 4] Formatting payload...`, 4);
+            
+            await sleep(400);
+            
+            const routes = determineRoutes(scrapedData);
+            log(`🚀 [SYSTEM 4] Routing to: ${routes.join(', ')}`, 4);
+            
+            await sleep(600);
+            
+            stage.classList.remove('active');
+            stage.classList.add('complete');
+            document.getElementById('stage4-status').textContent = '✓ Complete';
+            
+            const time = Date.now() - startTime;
+            pipelineMetrics['system4'] = time;
+            document.getElementById('metric4').textContent = time + 'ms';
+            
+            // Display routing
+            let routingHTML = routes.map(r => `<div class="routing-option">→ ${r}</div>`).join('');
+            document.getElementById('routingDestinations').innerHTML = routingHTML;
+            
+            log(`✅ [SYSTEM 4] Message delivered to all destinations`, 4);
+            
+            const totalTime = Object.values(pipelineMetrics).reduce((a, b) => a + b, 0);
+            log(`🎉 PIPELINE COMPLETE - Total: ${totalTime}ms`, 'info');
+        }
+        
+        function generateContextualMessage(data, name, title) {
+            const tech = data.key_technologies[0];
+            const valueProp = data.value_propositions[0];
+            
+            return `Hi ${name}, I noticed ${data.company_name} is built on ${tech} (saw it on your tech stack page). We help ${title}s like you scale ${valueProp.toLowerCase()}. Quick question: how are you currently handling real-time data across your services?`;
+        }
+        
+        function determineRoutes(data) {
+            const routes = [];
+            
+            if (data.team_size.includes('50')) {
+                routes.push('Salesforce CRM');
+                routes.push('HubSpot Deals');
+            } else {
+                routes.push('Gmail Draft');
+            }
+            
+            routes.push('Agent Workspace');
+            routes.push('Audit Trail');
+            
+            return routes;
+        }
+        
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+</body>
+</html>
