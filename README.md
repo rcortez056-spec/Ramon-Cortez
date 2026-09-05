@@ -11,7 +11,7 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 
 ---
 
-## Hi there, I'm Ramón Cortez 👋
+## Hi there, I'm Ramón Cortez 👋🏽
 
 
 
