@@ -5,8 +5,16 @@
 I design and deploy production-ready AI automation workflows, intelligent agents, and custom enterprise systems that optimize operations and eliminate manual bottlenecks. By bridging the gap between advanced artificial intelligence and business strategy, I help scale operational capabilities without increasing overhead.
 
 ---
+# AI System Architect | Agentic RAG Pipelines & Autonomous Workforces...
 
-# Hi there, I'm Ramón Cortez 👋
+I design and deploy production-ready AI automation workflows...
+
+🚀 **[Launch Live Demo: Four-System Unified Pipeline]()**
+
+---
+
+## Hi there, I'm Ramón Cortez 👋
+
 
 
 Scaling service-based businesses with custom multi-agent workflows built natively on Relevance AI.
