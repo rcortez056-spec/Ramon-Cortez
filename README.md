@@ -183,7 +183,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 *  **Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
-* **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://ramon-pipeline-demo.netlify.app) 
+* **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://vertex-ramon.netlify.app) 
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
