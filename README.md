@@ -81,27 +81,24 @@ For businesses looking to integrate automated lead intake, qualification engines
    * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com/b/OyMsg)** — Complete enterprise infrastructure package featuring tiered Haiku/Opus error recovery, Docker/Kubernetes configs, and production security checklists. [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
    
   
-### Overview
-This repository includes production-grade architectural blueprints and low-code/no-code autonomous agent configurations to reduce recurring engineering friction. Built for teams dealing with legacy data drift, brittle mapping layers, and manual break/fix maintenance cycles.
+## Overview
 
-Architectural Focus
-Schema-Aware Ingestion: Automatically detects, normalizes, and adapts to unexpected upstream payload changes without requiring constant script rewrites.
+This repository provides production-grade architectural blueprints and low-code/no-code autonomous agent configurations designed to eliminate manual operational friction and maintenance overhead.
 
-Resilient State Management: Replaces hardcoded translation layers with autonomous recovery workflows that route exceptions cleanly.
+* **Schema-Aware Ingestion:** Automatically detects, normalizes, and adapts to unexpected payload changes without manual intervention.
+* **Resilient State Management:** Replaces hardcoded mapping layers with autonomous recovery workflows that handle exceptions cleanly.
+* **Deterministic Logic:** Engineered for zero-fluff, high-leverage utility—prioritizing operational reliability over superficial automation.
 
-Deterministic Logic: Designed for zero-fluff, high-leverage utility—prioritizing engineering hours saved over superficial automation.
+### Repository Structure
+* `blueprints/` — Core workflow routing logic and agent schema definitions.
+* `docs/` — Technical specifications and system architecture breakdowns.
+* `payloads/` — Sample validation logs and test execution traces.
 
-Repository Structure
-Plaintext
-├── blueprints/       # Core workflow routing logic and schema definitions
-├── docs/             # Technical credentials and system architecture breakdowns
-└── payloads/         # Sample validation logs and test execution clips
-Implementation & Deployment
-These assets are structured for direct integration into modular automation environments.
+---
 
-Standard Build: Foundation systems built for targeted protocol handling.
-
-Advanced Production Grade ($99): Fully tested, multi-layered architectural blueprints optimized for high-volume synchronization and enterprise reliability.
+### Production Blueprints & Packages
+* **Standard Build:** Foundational low-code agent systems built for targeted protocol handling.
+* **Advanced Production Grade ($99):** Fully tested, multi-layered architectural blueprints optimized for high-volume orchestration and enterprise reliability.
 
 Professional Services
 Engineered and maintained by Ramon Cortez. Focused on building autonomous agent workflows and knowledge bases for production environments through an inbound, architecture-first model.
