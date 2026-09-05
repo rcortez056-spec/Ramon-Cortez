@@ -184,10 +184,10 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 *  **Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
-* **Vertex Architecture Orchestration:** Pipelines & Automation — [View Live Demo](https://ramon-pipeline-demo.netlify.app) 
+* **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://ramon-pipeline-demo.netlify.app) 
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
-*   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)- Direct Message via LinkedIn
+*   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) — Verified technical credentials
   
 * **Storefront:** [Visit Store](https://store.ramoncortezai.com) — Architecture blueprints & deployment packages
