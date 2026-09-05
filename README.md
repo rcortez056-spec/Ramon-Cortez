@@ -172,9 +172,8 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
   * *Human-in-the-Loop state machine pausing execution for explicit authorization.*
   * **Status:** Production-Ready | [View Live Demo](https://rcortez056-spec.github.io/two-way-dispatcher/)
     
-EMAIL THREAT DETECTION & RESPONSE PIPELINE
-5-Node Security Orchestration • Real-Time Classification • Escalation & Compliance Routing
-**Status:** Production-Ready | [View Live Demo](https://ramon-email-threat.netlify.app)
+
+* **Email Threat Detection & Response Pipeline:** 5-Node Security Orchestration • Escalation & Compliance Routing — [View Live Demo](https://ramon-email-threat.netlify.app)
 
 Live demo of a deterministic Fail-Safe Gateway designed to catch bad payloads, prevent API timeouts, and secure agent workflows:
 **Status:** Production- Ready | [View Live Demo](https://ramon-fail-safe.netlify.app)
@@ -184,15 +183,14 @@ Real-time scanning for exposed credentials, API keys, and secrets before publish
 
 **Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
-VERTEX ARCHITECTURE Orchestration • Pipelines • Automation
-**Status:** Production-Grade AI Infrastructure | [View Live Demo](https://vertex-ramon.netlify.app)
+* **Vertex Architecture Orchestration:** Pipelines & Automation — [View Live Demo](https://ramon-pipeline-demo.netlify.app) | [View Live Demo](https://vertex-ramon.netlify.app)
 
   Let's discuss AI transformation, autonomous workflows, or system architecture:
-*   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)
-*   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly)
-*   **Inquiries:** Direct Message via LinkedIn
-* **Payhip Storefront:** [Visit Store](https://store.ramoncortezai.com)
-* **Payhip Customer Support Agent:** [Launch Agent](https://store.ramoncortezai.com/b/yB5X4)
+*   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/)-Direct Message via LinkedIn
+*   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly)— Verified technical credentials
+  
+* **Storefront:** [Visit Store](https://store.ramoncortezai.com)— Architecture blueprints & deployment packages
+  
     
-  Building structured, scalable systems today to power the autonomous transformations of tomorrow."*
+  Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
 
