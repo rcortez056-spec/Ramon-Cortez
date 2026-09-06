@@ -41,7 +41,10 @@ Every system is engineered with:
 ### Enterprise Engagement
 For businesses looking to integrate automated lead intake, qualification engines, and custom software routing:
 * [Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0)
-### 📚 Tech Stack
+### 📺 Tech Stack
+
+* **Orchestration:** Relevance AI
+* **Knowledge Bases:** NotebookLM
 * **Publishing:** Substack | Dev.to | GitHub | Medium
 ### 🛠️ Core Expertise & Ecosystem
 *   **AI Architecture:** Agentic RAG Pipelines, Autonomous Workforces, Multi-Agent Orchestration
