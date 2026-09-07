@@ -44,10 +44,12 @@ Every system is engineered with:
 ### 💼 Enterprise Engagement
  ### 📄[Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0)
 ### 📺 Tech Stack
+### 📺 Tech Stack
 
-* **Orchestration:** Relevance AI
+* **Orchestration:** [Relevance AI](https://relevanceai.com/?via=ramon)
 * **Knowledge Bases:** NotebookLM
-* **Publishing:** Substack | Dev.to | GitHub | Medium
+* **Publishing:** [Substack](https://substack.com/@ramoncortez) | [Dev.to](https://dev.to/rcortez056) | [GitHub](https://github.com/rcortez056-spec) | [Medium](https://medium.com/@rcortez056)
+  
 ### 🛠️ Core Expertise & Ecosystem
 *   **AI Architecture:** Agentic RAG Pipelines, Autonomous Workforces, Multi-Agent Orchestration
 *   **No-Code/Low-Code AI Platforms:** Relevance AI, Claude (Anthropic), Gemini (Google)
