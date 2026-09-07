@@ -14,7 +14,6 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 ⚡ **[Interactive Simulation: Agent Orchestration Simulator](https://agentorchestrationsim.vercel.app)**
 
 
-## Hi there, I'm Ramón Cortez 👋🏽
 
 
 
@@ -25,7 +24,8 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 Building production-grade, custom AI automation systems and multi-agent pipelines for high-value industries (Restaurants, Dental, Finance, and Real Estate). Not templates. Not prompts. Infrastructure.
 
 
-### Engineering Standards
+**Engineering Standards**
+
 Every system is engineered with:
 - **Immutable State Management:** Zero data collisions.
 - **Fail-Safe Error Handling:** Robust error management at every step.
