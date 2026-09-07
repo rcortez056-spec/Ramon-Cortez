@@ -89,7 +89,7 @@ Every system is engineered with:
    
   
 ## Overview
-
+https://github.com/rcortez056-spec/Ramon-Cortez/blob/main/ChatGPT%20Image%20Sep%207%2C%202026%2C%2012_10_46%20PM.png
 This repository provides production-grade architectural blueprints and low-code/no-code autonomous agent configurations designed to eliminate manual operational friction and maintenance overhead.
 
 * **Schema-Aware Ingestion:** Automatically detects, normalizes, and adapts to unexpected payload changes without manual intervention.
