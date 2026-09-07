@@ -191,7 +191,20 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) - Verified technical credentials
   
 * **Storefront:** [Visit Store](https://store.ramoncortezai.com) - Architecture blueprints & deployment packages
-  
+  ---
+
+### ⚡ Featured Architecture: Autonomous Incident Diagnosis Engine
+
+> **Raw logs → Root cause + remediation in seconds.** > Production-ready AI-powered incident orchestration for enterprise operations teams.
+
+| Capability | Specification |
+| :--- | :--- |
+| **P1 Diagnosis** | Raw logs → Root cause & severity in **<5 seconds** |
+| **Pipeline Architecture** | **8-stage deterministic multi-agent workflow** with circuit breakers |
+| **Observability** | **Real-time audit trail** with full decision traceability |
+| **Escalation** | **Auto-routing** via Slack & ticket system integrations |
+
+👉 **[Access Storefront & Deployment Packages](https://store.ramoncortezai.com)**
     
   Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
 
