@@ -187,7 +187,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
  ### 💼 Enterprise Engagement 
 * [Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0#heading=h.do45k9b144gm)
   
- ![Multi-Agent Enterprise Ecosystem](https://github.com/rcortez056-spec/Ramon-Cortez/blob/main/ChatGPT%20Image%20Sep%207%2C%202026%2001_12_02%20PM.png?raw=true) 
+ ![Multi-Agent Enterprise Ecosystem](https://github.com/rcortez056-spec/Ramon-Cortez/blob/main/ChatGPT%20Image%20Sep%207%2C%202026%2C%2001_12_02%20PM.png?raw=true)
   
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
