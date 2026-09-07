@@ -62,14 +62,17 @@ For businesses looking to integrate automated lead intake, qualification engines
 ---
 <img src="./Screenshot_20-8-2026_181854_www.linkedin.com.jpeg" width="480" alt="LLM Routing Architecture" />
 ### 🧠 Architectural Case Study: Optimizing LLM Routing
-* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost. 
-* **The Blueprint:** 
+
+* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost.
+* **The Blueprint:**
   1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
   2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
   3. **Event Orchestration Pipeline Router:** [Live Demo](https://claude.ai/public/artifacts/5e5ad745-1f0d-41b3-8890-aa5f6e270e95)
+
 #### 🤖 1. Agentic RAG & Knowledge Retrieval Systems
-*   **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
-*   **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies for accurate enterprise data retrieval.⚙️ Core Architecture Visualized
+
+* **Overview:** Implementation strategies for context-aware Retrieval-Augmented Generation (RAG) pipelines.
+* **Key Features:** Vector database architecture, structured data ingestion, and advanced chunking strategies.
     
 
 
