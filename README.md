@@ -35,8 +35,7 @@ Every system is engineered with:
 ---
 
 
-### 💼 Enterprise Engagement
- ### 📄[Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0)
+
 ### 📺 Tech Stack
 
 * **Orchestration:** [Relevance AI](https://relevanceai.com/?via=ramon)
@@ -184,8 +183,9 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 
 *  **Status:** Production-Ready | [View Live Demo](https://ramon-content.netlify.app)
 
-* **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://vertex-ramon.netlify.app) 
-
+* **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://vertex-ramon.netlify.app)
+ ### 💼 Enterprise Engagement 
+* [Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0#heading=h.do45k9b144gm)
   Let's discuss AI transformation, autonomous workflows, or system architecture:
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) - Verified technical credentials
