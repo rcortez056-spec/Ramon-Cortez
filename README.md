@@ -1,4 +1,7 @@
- ## AI System Architect | Agentic RAG Pipelines & Autonomous Workforces With Claude
+ <div align="center">
+  <h3>AI Solutions Architecture & Autonomous Workflow Systems</h3>
+  <p><i>Designing structured, scalable agentic pipelines and knowledge engines.</i></p>
+</div>
 
 
 
