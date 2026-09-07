@@ -44,7 +44,6 @@ Every system is engineered with:
 ### 💼 Enterprise Engagement
  ### 📄[Access Full Client Package & Scope Guide](https://docs.google.com/document/d/1W3kjragvEpsg12eQYstqhjrljtsLWjqaclg2ety8eFY/edit?tab=t.0)
 ### 📺 Tech Stack
-### 📺 Tech Stack
 
 * **Orchestration:** [Relevance AI](https://relevanceai.com/?via=ramon)
 * **Knowledge Bases:** NotebookLM
