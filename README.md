@@ -12,19 +12,19 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 
 🚀 **[Launch Live Demo: Four-System Unified Pipeline](https://rcortez056-spec.github.io/Ramon-Cortez/four-system-pipeline.html)**
 ⚡ **[Interactive Simulation: Agent Orchestration Simulator](https://agentorchestrationsim.vercel.app)**
----
+
 
 ## Hi there, I'm Ramón Cortez 👋🏽
 
 
 
 
----
+
 # Ramon Cortez | AI Solutions Architect
 
 Building production-grade, custom AI automation systems and multi-agent pipelines for high-value industries (Restaurants, Dental, Finance, and Real Estate). Not templates. Not prompts. Infrastructure.
 
----
+
 ### Engineering Standards
 Every system is engineered with:
 - **Immutable State Management:** Zero data collisions.
@@ -32,7 +32,7 @@ Every system is engineered with:
 - **Complete Audit Trails:** Every execution is fully logged.
 - **Performance Monitoring:** Built-in metrics and analytics.
 
----
+
 
 
 
