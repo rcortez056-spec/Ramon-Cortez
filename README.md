@@ -58,7 +58,7 @@ For businesses looking to integrate automated lead intake, qualification engines
 ---
 
 ### 🚀 Featured Frameworks & Projects
-*(Below are the architectural blueprints and integrations powering my autonomous workflows)*
+
 ---
 <img src="./Screenshot_20-8-2026_181854_www.linkedin.com.jpeg" width="480" alt="LLM Routing Architecture" />
 ### 🧠 Architectural Case Study: Optimizing LLM Routing
