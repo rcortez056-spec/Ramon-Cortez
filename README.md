@@ -134,7 +134,7 @@ You can view the active Claude system design, interactive variables, and structu
 ### 🌐 Project 2: 3D Data Orchestration Engine (Live Automation Workflow)
 An interactive, browser-native 3D simulation that visualizes real-time data pipelining, node communication, and state synchronization across enterprise platforms.
 
-* **Claude 3D Visualizer Artifact:** [Live demo](https://claude.ai/public/artifacts/fbb43d43-13de-4952-98c0-2cb2ca1d0653)
+* **Claude 3D Visualizer Artifact:** [Live demo](https://automation-workflow-1.vercel.app)
 
 
 
@@ -143,7 +143,7 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
   ## 🛠️ Production-Ready AI Automation Architecture
 
 Here are live, interactive demonstration environments that show enterprise-grade orchestration pipelines, resilient system design, and high-converting revenue infrastructure.
-* **Claude System Artifact:** [Live demo](https://automation-workflow-1.vercel.app)
+* **Claude System Artifact:** [Live demo]()
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
