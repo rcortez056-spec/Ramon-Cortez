@@ -1,11 +1,7 @@
  <div align="center">
   <h3>AI Solutions Architecture & Autonomous Workflow Systems</h3>
   <p><i>Designing structured, scalable agentic pipelines and knowledge engines.</i></p>
-</div>
-
-# ⚡ Ramon Cortez | AI Software House
-### AI Solutions Architecture & Autonomous Workflow Systems
-*Designing structured, scalable agentic pipelines and knowledge engines.*
+</div
 
 I design and deploy production-ready AI automation workflows, intelligent multi-agent networks, and enterprise-grade execution pipelines. Experience the full power of agentic architecture with the Four-System Unified Pipeline—an end-to-end framework combining dynamic routing, multi-agent orchestration, context synthesis, and automated execution into a single, real-time operating showcase.
 
