@@ -143,7 +143,7 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
   ## 🛠️ Production-Ready AI Automation Architecture
 
 Here are live, interactive demonstration environments that show enterprise-grade orchestration pipelines, resilient system design, and high-converting revenue infrastructure.
-* **Claude System Artifact:** [Live demo](https://claude.ai/public/artifacts/5d5f2e55-ee73-49e9-9c99-cdb5f6c780e2)
+* **Claude System Artifact:** [Live demo](https://automation-workflow-1.vercel.app)
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
