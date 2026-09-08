@@ -142,8 +142,9 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
  
   ## 🛠️ Production-Ready AI Automation Architecture
 
-Here are live, interactive demonstration environments that show enterprise-grade orchestration pipelines, resilient system design, and high-converting revenue infrastructure.
-* **Claude System Artifact:** [Live demo]()
+### Lead Intelligence Engine
+
+* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://lead-intelligence-system-iota.vercel.app)
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
