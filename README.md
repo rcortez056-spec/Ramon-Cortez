@@ -121,6 +121,7 @@ You can view the active Claude system design, interactive variables, and structu
 *   **CRM (Customer Relationship Management):** Tracks pipeline changes, contract executions, and user lifecycle shifts.
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
+*   ![System Architecture Flow](https://raw.githubusercontent.com/rcortez056-spec/Ramon-Cortez/refs/heads/main/orchestration_pipeline_diagram_4.svg)
 *    ## 🛠️ Technical 
 *   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
