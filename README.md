@@ -54,7 +54,7 @@ Every system is engineered with:
 
 
 <img src="./Screenshot_20-8-2026_181854_www.linkedin.com.jpeg" width="480" alt="LLM Routing Architecture" />
-### 🧠 Architectural Case Study: Optimizing LLM Routing
+ 🧠 Architectural Case Study: Optimizing LLM Routing
 
 * **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost.
 * **The Blueprint:**
