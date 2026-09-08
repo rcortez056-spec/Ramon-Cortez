@@ -199,6 +199,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 * **Restaurant Operations Engine:** [Launch Live Interactive Demo ↗](https://ai-restau.netlify.app)
   
   Let's discuss AI transformation, autonomous workflows, or system architecture:
+  * **Direct Email:** [client@ramoncortezai.com](mailto:client@ramoncortezai.com) - Direct client & system inquiries
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
 *   **Credly Portfolio:** [My Badges](https://www.credly.com/users/ramon-cortez.652e2abd/badges/credly) - Verified technical credentials
   
