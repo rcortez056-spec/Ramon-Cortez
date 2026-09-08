@@ -1,118 +1,98 @@
-<svg width="100%" viewBox="0 0 680 820" role="img">
-  <title>AI Agent Orchestration Pipeline Architecture</title>
-  <desc>State machine showing data flow through 5 coordinated agents with error handling, immutable state management, and logging infrastructure.</desc>
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%" style="background-color: #0d1117; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2937" stroke-width="1" stroke-dasharray="2,2"/>
+    </pattern>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-magenta" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-amber" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00f0ff" />
+    </marker>
+    <marker id="arrow-magenta" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#bd00ff" />
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ffb800" />
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff0033" />
     </marker>
   </defs>
 
-  <style>
-    .t { font: 400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--text-primary); }
-    .ts { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--text-secondary); }
-    .th { font: 500 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--text-primary); }
-  </style>
+  <rect width="1000" height="650" fill="#0d1117" />
+  <rect width="1000" height="650" fill="url(#grid)" />
 
-  <!-- Title -->
-  <text class="th" x="340" y="40" text-anchor="middle">Agent Orchestration Pipeline</text>
-  <text class="ts" x="340" y="58" text-anchor="middle">State machine with immutable data flow and error handling</text>
+  <text x="500" y="45" text-anchor="middle" fill="#f3f4f6" font-size="24" font-weight="700" letter-spacing="1">AGENT ORCHESTRATION PIPELINE</text>
+  <text x="500" y="70" text-anchor="middle" fill="#9ca3af" font-size="13" font-weight="400">State machine with immutable data flow, deterministic routing &amp; fail-safe logging</text>
+  
+  <rect x="360" y="90" width="280" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="500" y="107" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="600" font-family="monospace">STATUS: ACTIVE // EXECUTION: DETERMINISTIC</text>
 
-  <!-- INPUT -->
-  <rect x="200" y="80" width="280" height="52" rx="8" fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1"/>
-  <text class="th" x="340" y="102" text-anchor="middle">Review Input</text>
-  <text class="ts" x="340" y="120" text-anchor="middle">Review text, business name, platform</text>
+  <path d="M 230 200 L 370 200" stroke="#00f0ff" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M 610 200 L 750 200" stroke="#bd00ff" stroke-width="2" marker-end="url(#arrow-magenta)"/>
+  <path d="M 490 250 L 330 350" stroke="#bd00ff" stroke-width="2" marker-end="url(#arrow-magenta)"/>
+  <path d="M 870 250 L 670 350" stroke="#00ff66" stroke-width="2" marker-end="url(#arrow-amber)"/>
 
-  <!-- Arrow down -->
-  <line x1="340" y1="132" x2="340" y2="160" stroke="var(--border-strong)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 110 250 L 110 520 L 150 520" stroke="#ff0033" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-red)"/>
+  <path d="M 490 250 L 490 520 L 200 520" stroke="#ff0033" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <path d="M 870 250 L 870 520 L 850 520" stroke="#ff0033" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-red)"/>
 
-  <!-- IMMUTABLE STATE CONTAINER -->
-  <rect x="60" y="160" width="560" height="520" rx="12" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="4 2"/>
-  <text class="ts" x="76" y="178">Immutable Pipeline State</text>
+  <g transform="translate(30, 150)">
+    <rect width="200" height="100" rx="10" fill="#161b22" stroke="#00f0ff" stroke-width="2" filter="url(#glow-blue)"/>
+    <text x="100" y="35" text-anchor="middle" fill="#00f0ff" font-size="15" font-weight="700">Validate Agent</text>
+    <text x="100" y="60" text-anchor="middle" fill="#9ca3af" font-size="11">Check input schema &amp;</text>
+    <text x="100" y="75" text-anchor="middle" fill="#9ca3af" font-size="11">data integrity</text>
+  </g>
 
-  <!-- AGENT 1: VALIDATE -->
-  <rect x="80" y="190" width="160" height="60" rx="8" stroke-width="1" fill="#EEEDFE" stroke="#534AB7"/>
-  <text style="font: 500 13px -apple-system; fill: #534AB7;" x="160" y="210" text-anchor="middle">Validate Agent</text>
-  <text style="font: 400 11px -apple-system; fill: #3C3489;" x="160" y="228" text-anchor="middle">Check input data</text>
-  <text style="font: 400 11px -apple-system; fill: #3C3489;" x="160" y="242" text-anchor="middle">integrity</text>
+  <g transform="translate(390, 150)">
+    <rect width="220" height="100" rx="10" fill="#161b22" stroke="#bd00ff" stroke-width="2" filter="url(#glow-magenta)"/>
+    <text x="110" y="35" text-anchor="middle" fill="#bd00ff" font-size="15" font-weight="700">Enrich Agent</text>
+    <text x="110" y="60" text-anchor="middle" fill="#9ca3af" font-size="11">Context synthesis &amp;</text>
+    <text x="110" y="75" text-anchor="middle" fill="#9ca3af" font-size="11">payload extraction</text>
+  </g>
 
-  <!-- AGENT 2: ENRICH -->
-  <rect x="280" y="190" width="160" height="60" rx="8" stroke-width="1" fill="#FAECE7" stroke="#993C1D"/>
-  <text style="font: 500 13px -apple-system; fill: #993C1D;" x="360" y="210" text-anchor="middle">Enrich Agent</text>
-  <text style="font: 400 11px -apple-system; fill: #712B13;" x="360" y="228" text-anchor="middle">Sentiment analysis,</text>
-  <text style="font: 400 11px -apple-system; fill: #712B13;" x="360" y="242" text-anchor="middle">data extraction</text>
+  <g transform="translate(750, 150)">
+    <rect width="220" height="100" rx="10" fill="#161b22" stroke="#00ff66" stroke-width="2" filter="url(#glow-green)"/>
+    <text x="110" y="35" text-anchor="middle" fill="#00ff66" font-size="15" font-weight="700">Generate Agent</text>
+    <text x="110" y="60" text-anchor="middle" fill="#9ca3af" font-size="11">Construct personalized</text>
+    <text x="110" y="75" text-anchor="middle" fill="#9ca3af" font-size="11">response content</text>
+  </g>
 
-  <!-- AGENT 3: GENERATE -->
-  <rect x="480" y="190" width="160" height="60" rx="8" stroke-width="1" fill="#E1F5EE" stroke="#0F6E56"/>
-  <text style="font: 500 13px -apple-system; fill: #0F6E56;" x="560" y="210" text-anchor="middle">Generate Agent</text>
-  <text style="font: 400 11px -apple-system; fill: #085041;" x="560" y="228" text-anchor="middle">Create personalized</text>
-  <text style="font: 400 11px -apple-system; fill: #085041;" x="560" y="242" text-anchor="middle">reply content</text>
+  <g transform="translate(210, 350)">
+    <rect width="220" height="100" rx="10" fill="#161b22" stroke="#ffb800" stroke-width="2" filter="url(#glow-amber)"/>
+    <text x="110" y="35" text-anchor="middle" fill="#ffb800" font-size="15" font-weight="700">Deliver Agent</text>
+    <text x="110" y="60" text-anchor="middle" fill="#9ca3af" font-size="11">Multi-channel dispatch</text>
+    <text x="110" y="75" text-anchor="middle" fill="#9ca3af" font-size="11">&amp; webhook output</text>
+  </g>
 
-  <!-- Arrows between top agents -->
-  <line x1="240" y1="220" x2="280" y2="220" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="440" y1="220" x2="480" y2="220" stroke="#993C1D" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g transform="translate(570, 350)">
+    <rect width="220" height="100" rx="10" fill="#161b22" stroke="#ffb800" stroke-width="2" filter="url(#glow-amber)"/>
+    <text x="110" y="35" text-anchor="middle" fill="#ffb800" font-size="15" font-weight="700">Analytics Agent</text>
+    <text x="110" y="60" text-anchor="middle" fill="#9ca3af" font-size="11">Log telemetry metrics &amp;</text>
+    <text x="110" y="75" text-anchor="middle" fill="#9ca3af" font-size="11">execution tracing</text>
+  </g>
 
-  <!-- Arrow down to next layer -->
-  <line x1="340" y1="250" x2="340" y2="290" stroke="var(--border-strong)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- AGENT 4: DELIVER -->
-  <rect x="180" y="290" width="160" height="60" rx="8" stroke-width="1" fill="#FAEEDA" stroke="#854F0B"/>
-  <text style="font: 500 13px -apple-system; fill: #854F0B;" x="260" y="310" text-anchor="middle">Deliver Agent</text>
-  <text style="font: 400 11px -apple-system; fill: #633806;" x="260" y="328" text-anchor="middle">Post to platform,</text>
-  <text style="font: 400 11px -apple-system; fill: #633806;" x="260" y="342" text-anchor="middle">send email</text>
-
-  <!-- AGENT 5: ANALYZE -->
-  <rect x="380" y="290" width="160" height="60" rx="8" stroke-width="1" fill="#EAF3DE" stroke="#3B6D11"/>
-  <text style="font: 500 13px -apple-system; fill: #3B6D11;" x="460" y="310" text-anchor="middle">Analytics Agent</text>
-  <text style="font: 400 11px -apple-system; fill: #27500A;" x="460" y="328" text-anchor="middle">Track metrics,</text>
-  <text style="font: 400 11px -apple-system; fill: #27500A;" x="460" y="342" text-anchor="middle">log execution</text>
-
-  <!-- Arrow between delivery & analytics -->
-  <line x1="340" y1="320" x2="380" y2="320" stroke="var(--border-strong)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Arrow down to error handler -->
-  <line x1="340" y1="350" x2="340" y2="390" stroke="var(--border-strong)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- ERROR HANDLING BLOCK -->
-  <rect x="80" y="390" width="520" height="60" rx="8" stroke-width="1" fill="#FCEBEB" stroke="#A32D2D"/>
-  <text style="font: 500 13px -apple-system; fill: #A32D2D;" x="340" y="410" text-anchor="middle">Error Handler</text>
-  <text style="font: 400 11px -apple-system; fill: #791F1F;" x="340" y="428" text-anchor="middle">Any agent failure → Catch exception → Log error → Route to FAILED state</text>
-
-  <!-- Curved error paths from agents to error handler -->
-  <path d="M 160 250 Q 140 320 160 390" stroke="#A32D2D" stroke-width="1" fill="none" marker-end="url(#arrow)" opacity="0.5"/>
-  <path d="M 360 250 Q 340 320 340 390" stroke="#A32D2D" stroke-width="1" fill="none" marker-end="url(#arrow)" opacity="0.5"/>
-  <path d="M 520 250 Q 540 320 520 390" stroke="#A32D2D" stroke-width="1" fill="none" marker-end="url(#arrow)" opacity="0.5"/>
-
-  <!-- STATE UPDATES BOX -->
-  <rect x="80" y="475" width="520" height="80" rx="8" stroke-width="1" fill="var(--surface-1)" stroke="var(--border-strong)"/>
-  <text class="th" x="340" y="495" text-anchor="middle">State Immutability Pattern</text>
-  <text class="ts" x="90" y="515">1. Agent executes with current state → Returns dict of updates</text>
-  <text class="ts" x="90" y="531">2. Orchestrator: state = state.copy(update=updates)</text>
-  <text class="ts" x="90" y="547">3. New state created with merged updates, old state unchanged</text>
-
-  <!-- LOGGING & TRACKING -->
-  <rect x="80" y="575" width="520" height="65" rx="8" stroke-width="1" fill="var(--surface-1)" stroke="var(--border-strong)"/>
-  <text class="th" x="340" y="595" text-anchor="middle">Infrastructure: Logging & Monitoring</text>
-  <text class="ts" x="90" y="615">✓ File logs (orchestration_pipeline.log) | ✓ Execution log array (every step)</text>
-  <text class="ts" x="90" y="631">✓ Error tracking | ✓ Metrics collection | ✓ Performance monitoring</text>
-
-  <!-- Arrow to output -->
-  <line x1="340" y1="640" x2="340" y2="670" stroke="var(--border-strong)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- OUTPUT -->
-  <rect x="120" y="670" width="440" height="70" rx="8" fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1"/>
-  <text class="th" x="340" y="692" text-anchor="middle">Final State</text>
-  <text class="ts" x="340" y="710" text-anchor="middle">Status: COMPLETE | Generated reply | Delivery confirmation | Metrics</text>
-  <text class="ts" x="340" y="728" text-anchor="middle">Success rate, latency, execution log (all steps tracked)</text>
-
-  <!-- Legend -->
-  <g>
-    <text class="th" x="60" y="785">Key Pattern Elements:</text>
-    
-    <rect x="60" y="800" width="12" height="12" rx="2" fill="#534AB7"/>
-    <text class="ts" x="78" y="810">Immutable state flowing through agents</text>
-    
-    <line x1="60" y1="825" x2="72" y2="825" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <text class="ts" x="78" y="830">Error paths (catch & redirect to FAILED)</text>
+  <g transform="translate(150, 490)">
+    <rect width="700" height="70" rx="10" fill="#1a0d13" stroke="#ff0033" stroke-width="2" filter="url(#glow-red)"/>
+    <text x="350" y="32" text-anchor="middle" fill="#ff0033" font-size="15" font-weight="700">Fail-Safe Error Handler &amp; Fallback Logger</text>
+    <text x="350" y="52" text-anchor="middle" fill="#9ca3af" font-size="11">Intercepts state collisions, logs exceptions, and reroutes failed tasks deterministically</text>
   </g>
 </svg>
