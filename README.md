@@ -144,7 +144,7 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
 
 ### Lead Intelligence Engine
 
-* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://lead-intelligence-system-iota.vercel.app)
+* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://claude.ai/public/artifacts/985aee91-f2e0-4e16-b9a5-e7c0f3af0b1d)
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
