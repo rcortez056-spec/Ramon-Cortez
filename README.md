@@ -123,7 +123,9 @@ You can view the active Claude system design, interactive variables, and structu
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
   <img width="1485" height="1059" alt="ChatGPT Image Sep 8, 2026, 04_58_08 PM" src="https://github.com/user-attachments/assets/a99c0b73-508a-4c7d-926d-d1b467745f18" />
+  
 * **Live Workflow Demo:** [Agentic AI Workflow](https://ramon-ai-systems.netlify.app/)
+* 
 *    ## 🛠️ Technical 
 *   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
