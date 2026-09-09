@@ -223,5 +223,5 @@ That is what separates a fragile prototype from a production-grade system.
 *Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
 
     
-  Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
+ 
 
