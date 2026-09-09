@@ -80,7 +80,7 @@ Every system is engineered with:
 
    * **Production Build**: **[Self-Healing Orchestration System v2.0 (Live Core Architecture & Deployment Guide)](https://store.ramoncortezai.com/b/OyMsg)** . [Self-Healing Orchestration System v2.0 Frequently Asked Questions (PDF)](https://docs.google.com/document/d/1UjMxNA_OAJ_U_kkMIYEpIy-LwlwfBRy_k_yvv_fYc44/edit?usp=sharing)
      
-* **Live Workflow Demo:** [Agentic AI Workflow](https://ramon-ai-systems.netlify.app/)   
+ 
   
 ## Overview
 ![Multi-Agent Architecture](https://github.com/rcortez056-spec/Ramon-Cortez/blob/main/ChatGPT%20Image%20Sep%207%2C%202026%2C%2012_10_46%20PM.png?raw=true)
@@ -123,7 +123,7 @@ You can view the active Claude system design, interactive variables, and structu
 *   **Email Automation Engine:** Triggers real-time inbound/outbound messaging and transactional sequences based on live CRM state changes.
 *   **Centralized Database:** The low-latency source of truth, maintaining data integrity and enforcing validation rules across the environment.
   <img width="1485" height="1059" alt="ChatGPT Image Sep 8, 2026, 04_58_08 PM" src="https://github.com/user-attachments/assets/a99c0b73-508a-4c7d-926d-d1b467745f18" />
-
+* **Live Workflow Demo:** [Agentic AI Workflow](https://ramon-ai-systems.netlify.app/)
 *    ## 🛠️ Technical 
 *   Implementation Details
 *   **Engine:** Built using raw WebGL via the Three.js library for hardware-accelerated, high-performance rendering.
