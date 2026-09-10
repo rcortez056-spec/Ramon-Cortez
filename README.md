@@ -16,7 +16,7 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 
 ### ⚡ Featured Production Build
 
-#### 🏠 #### 🏠 Property Launch Kit Agent
+#### 🏠 Property Launch Kit Agent
  **Deterministic Campaign Generation Engine**  
  Converts single-input property parameters into 7 distinct, ready-to-deploy real estate marketing outputs in real time. Zero API key friction.
 
