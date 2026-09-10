@@ -29,7 +29,7 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 **Client Scope & System Matching Engine**  
 Interactive qualification tool that parses project requirements and maps business bottlenecks directly to low-code AI agent architectures.
 
-* **Live Demo**: [rcortez056-spec.github.io/ramons-intake-assistant](https://rcortez056-spec.github.io/ramons-intake-assistant/)
+* **Live Demo**: [rcortez056-spec.github.io/ramons-intake-assistant](https://rcortez056-spec.github.io/ramons-intake-assistant)
 * **Repository**: [github.com/rcortez056-spec/ramons-intake-assistant](https://github.com/rcortez056-spec/ramons-intake-assistant)
 * **Architecture**: Client-side deterministic qualification & scope-matching node
 
