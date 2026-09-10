@@ -23,14 +23,17 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 * **Live Demo**: [property-launch-kit-v3.](https://claude.ai/public/artifacts/63fdd9a2-19e7-4e4b-b490-25aa63956eb0)
 * **Architecture**: Client-side deterministic template parsing & execution node
 * **Output Stack**: MLS Property Listing, Instagram Teaser, Buyer Email Pitch, Meta/Google Ad Copy, Open House Announcement, Agent Outreach Pitch, and Print Flyer Layout.
+
 #### 🤖 Ramon's Intake Assistant
 
 **Client Scope & System Matching Engine**  
 Interactive qualification tool that parses project requirements and maps business bottlenecks directly to low-code AI agent architectures.
 
-* **Live Demo**: [rcortez056-spec.github.io/ramons-intake-assistant](https://rcortez056-spec.github.io/ramons-intake-assistant)
+* **Live Demo**: [rcortez056-spec.github.io/ramons-intake-assistant](https://rcortez056-spec.github.io/ramons-intake-assistant/)
 * **Repository**: [github.com/rcortez056-spec/ramons-intake-assistant](https://github.com/rcortez056-spec/ramons-intake-assistant)
 * **Architecture**: Client-side deterministic qualification & scope-matching node
+
+  
 ---
 
 
