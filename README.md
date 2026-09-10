@@ -12,7 +12,19 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
 
 🚀 **[Launch Live Demo: Four-System Unified Pipeline](https://rcortez056-spec.github.io/Ramon-Cortez/four-system-pipeline.html)**
 ⚡ **[Interactive Simulation: Agent Orchestration Simulator](https://agentorchestrationsim.vercel.app)**
+---
 
+### ⚡ Featured Production Build
+
+#### 🏠 [Property Launch Kit Agent](https://property-launch-kit-v3.vercel.app)
+ **Deterministic Campaign Generation Engine**  
+ Converts single-input property parameters into 7 distinct, ready-to-deploy real estate marketing outputs in real time. Zero API key friction.
+
+* **Live Demo**: [property-launch-kit-v3.vercel.app](https://property-launch-kit-v3.vercel.app)
+* **Architecture**: Client-side deterministic template parsing & execution node
+* **Output Stack**: MLS Property Listing, Instagram Teaser, Buyer Email Pitch, Meta/Google Ad Copy, Open House Announcement, Agent Outreach Pitch, and Print Flyer Layout.
+
+---
 
 
 
