@@ -20,7 +20,7 @@ I design and deploy production-ready AI automation workflows, intelligent multi-
  **Deterministic Campaign Generation Engine**  
  Converts single-input property parameters into 7 distinct, ready-to-deploy real estate marketing outputs in real time. Zero API key friction.
 
-* **Live Demo**: [property-launch-kit-v3.vercel.app](https://property-launch-kit-v3.vercel.app)
+* **Live Demo**: [property-launch-kit-v3.](https://claude.ai/public/artifacts/63fdd9a2-19e7-4e4b-b490-25aa63956eb0)
 * **Architecture**: Client-side deterministic template parsing & execution node
 * **Output Stack**: MLS Property Listing, Instagram Teaser, Buyer Email Pitch, Meta/Google Ad Copy, Open House Announcement, Agent Outreach Pitch, and Print Flyer Layout.
 
