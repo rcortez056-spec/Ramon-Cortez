@@ -204,7 +204,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 * **Restaurant Operations Engine:** [Launch Live Interactive Demo ↗](https://ai-restau.netlify.app)
   - [Restaurant & Event Catering Qualification Knowledge Base](https://userdata-bcbe5a.stack.tryrelevance.com/files/knowledge_set/4739e460-d5a5-4f1e-accc-ed10229b2ee0/restaurant_event_catering_qualification_knowledge_base_pdf/fdba54c5-dbd7-48dd-a6ac-be7867212ff6.pdf)
 - [Inbound Lead Intake & Pricing Overview](https://docs.google.com/document/d/1bD-prqBOzq6VzCnMCnljNNjOpHvaaoIkyyM-T82qE2Q/edit?usp=sharing)
-- 
+- [Inbound Lead Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSee448enA43SlQ0x22YFUDYZyGaLUAMy7K5s82YBLWT9NvP4Q/viewform?usp=header)
   Let's discuss AI transformation, autonomous workflows, or system architecture:
   * **Direct Email:** [client@ramoncortezai.com](mailto:client@ramoncortezai.com) - Direct client & system inquiries
 *   **LinkedIn:** [View my profile](https://linkedin.com/in/ramon-cortez-a227a2112/) - Direct Message via LinkedIn
