@@ -171,7 +171,7 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
 
 ### Lead Intelligence Engine
 
-* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://ramon-ai-systems.netlify.app)
+* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://ramon-lead-system.netlify.app)
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
