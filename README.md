@@ -78,7 +78,7 @@ Every system is engineered with:
 <img src="./Screenshot_20-8-2026_181854_www.linkedin.com.jpeg" width="480" alt="LLM Routing Architecture" />
  🧠 Architectural Case Study: Optimizing LLM Routing
 
-* **The Insight:** Don't use an LLM to route an LLM—that just doubles your latency and cost.
+* **The Insight:** Don't use an LLM to route an LLM—that doubles your latency and cost.
 * **The Blueprint:**
   1. **Regex/Rules:** Catch obvious, predictable patterns with lightweight code first.
   2. **Tiered Selection:** Route hard problems to reasoning models, creative work to specialized models, and fast, low-cost models for simple queries.
@@ -171,7 +171,7 @@ An interactive, browser-native 3D simulation that visualizes real-time data pipe
 
 ### Lead Intelligence Engine
 
-* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://claude.ai/public/artifacts/985aee91-f2e0-4e16-b9a5-e7c0f3af0b1d)
+* **Automated Intake & Qualification:** [Launch Live Interactive Demo ↗](https://ramon-ai-systems.netlify.app)
 ---
 
 ### 🎛️ 1. Automation Systems Command Center
