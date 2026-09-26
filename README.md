@@ -62,7 +62,7 @@ Every system is engineered with:
 
 * **Orchestration:** [Relevance AI](https://relevanceai.com/?via=ramon)
 * **Knowledge Bases:** NotebookLM
-* **Publishing:** [Substack](https://substack.com/@ramoncortez)  | [Medium](https://medium.com/@rcortez056)
+* **Publishing:** [Substack](https://substack.com/@ramoncortez)  | 
   
 ### 🛠️ Core Expertise & Ecosystem
 *   **AI Architecture:** Agentic RAG Pipelines, Autonomous Workforces, Multi-Agent Orchestration
