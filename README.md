@@ -247,7 +247,7 @@ That is what separates a fragile prototype from a production-grade system.
 ## 📚 System Documentation & Validation
 
 * **System Architecture:** [docs/system-architecture.md](./docs/system-architecture.md)
-* **Stress Testing Log:** [docs/stress-testing-log.md](./docs/stress-testing-log.md)
+* **Stress Testing Log:** [docs/stress-testing-log.md](https://github.com/rcortez056-spec/Ramon-Cortez/blob/main/docs/stress-testing-log.md.)
   
 *Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
 
