@@ -244,7 +244,11 @@ This hits the core of how I build:
 Prompting is about 20% of the work. The other 80% is building reliable systems around it—infrastructure, error handling, data pipelines, and budget constraints.
 
 That is what separates a fragile prototype from a production-grade system.
+## 📚 System Documentation & Validation
 
+* **System Architecture:** [docs/system-architecture.md](./docs/system-architecture.md)
+* **Stress Testing Log:** [docs/stress-testing-log.md](./docs/stress-testing-log.md)
+  
 *Building structured, scalable systems today to power the autonomous transformations of tomorrow.*
 
     
