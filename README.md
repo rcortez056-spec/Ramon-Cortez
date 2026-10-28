@@ -1,7 +1,7 @@
  # Ramon Cortez | AI Systems House
 
 <div align="center">
-  <h3>AI Solutions Architecture & Autonomous Workflow Systems</h3>
+  <h3>AI Solutions Architect & Hacker | Production Agentic Workflows & System Design | Relevance AI</h3>
   <p><i>Designing structured, scalable agentic pipelines and knowledge engines.</i></p>
 </div>
 
