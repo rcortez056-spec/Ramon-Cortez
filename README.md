@@ -1,9 +1,12 @@
  # Ramon Cortez | AI Systems House
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/campus-sentinel/deploy-status)
+
 <div align="center">
-  <h3>AI Solutions Architect & Hacker | Production Agentic Workflows & System Design | Relevance AI</h3>
-  <p><i>Designing structured, scalable agentic pipelines and knowledge engines.</i></p>
-</div>
+    <h3>AI Solutions Architect & Hacker | Production Agentic Workflows & System Design | Relevance AI</h3>
+    <p><i>Designing structured, scalable agentic pipelines and knowledge engines.</i></p>
+
 
 I design and deploy production-ready AI automation workflows, intelligent multi-agent networks, and enterprise-grade execution pipelines. Experience the full power of agentic architecture with the Four-System Unified Pipeline—an end-to-end framework combining dynamic routing, multi-agent orchestration, context synthesis, and automated execution into a single, real-time operating showcase.
 
