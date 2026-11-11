@@ -6,6 +6,7 @@
   <a href="https://substack.com"><img src="https://img.shields.io/badge/Substack-FF6719?style=flat&logo=substack&logoColor=white" alt="Substack"></a>
   <a href="https://dev.to"><img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=dev.to&logoColor=white" alt="DEV.to"></a>
 </p>
+
 [![Hosting: Netlify](https://img.shields.io/badge/hosting-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://campus-sentinel.netlify.app)
 
 <div align="center">
