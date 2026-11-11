@@ -1,14 +1,14 @@
  # Ramon Cortez | AI Systems House
 <p align="center">
   <a href="https://github.com/rcortez056-spec"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://www.netlify.com"><img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white" alt="Netlify"></a>
-  <a href="https://github.com"><img src="https://img.shields.io/badge/Relevance_AI-FF4500?style=flat&logo=ai&logoColor=white" alt="Relevance AI"></a>
-  <a href="https://substack.com"><img src="https://img.shields.io/badge/Substack-FF6719?style=flat&logo=substack&logoColor=white" alt="Substack"></a>
-  <a href="https://dev.to"><img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=dev.to&logoColor=white" alt="DEV.to"></a>
-  <a href="https://medium.com"><img src="https://img.shields.io/badge/Medium-121212?style=flat&logo=medium&logoColor=white" alt="Medium"></a>
+  <a href="https://www.netlify.com/campus-sentinel"><img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white" alt="Netlify"></a>
+  <a href="https://github.comcampus-sentinel"><img src="https://img.shields.io/badge/Relevance_AI-FF4500?style=flat&logo=ai&logoColor=white" alt="Relevance AI"></a>
+  <a href="https://substack.com/@ramoncortez"><img src="https://img.shields.io/badge/Substack-FF6719?style=flat&logo=substack&logoColor=white" alt="Substack"></a>
+  <a href="https://dev.to/rcortez056"><img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=dev.to&logoColor=white" alt="DEV.to"></a>
+  <a href="https://medium.com/@rcortez056"><img src="https://img.shields.io/badge/Medium-121212?style=flat&logo=medium&logoColor=white" alt="Medium"></a>
 </p>
 
-[![Hosting: Netlify](https://img.shields.io/badge/hosting-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://campus-sentinel.netlify.app)
+
 
 <div align="center">
     <h3>AI Solutions Architect & Hacker | Production Agentic Workflows & System Design | Relevance AI</h3>
