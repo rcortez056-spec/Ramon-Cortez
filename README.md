@@ -1,6 +1,6 @@
  # Ramon Cortez | AI Systems House
 
-[![Hosting: Netlify](https://img.shields.io/badge/hosting-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/sites/campus-sentinel/deploys)
+[![Hosting: Netlify](https://img.shields.io/badge/hosting-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://campus-sentinel.netlify.app)
 
 <div align="center">
     <h3>AI Solutions Architect & Hacker | Production Agentic Workflows & System Design | Relevance AI</h3>
