@@ -6,7 +6,7 @@
   <a href="https://substack.com/@ramoncortez"><img src="https://img.shields.io/badge/Substack-FF6719?style=flat&logo=substack&logoColor=white" alt="Substack"></a>
   <a href="https://dev.to/rcortez056"><img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=dev.to&logoColor=white" alt="DEV.to"></a>
   <a href="https://medium.com/@rcortez056"><img src="https://img.shields.io/badge/Medium-121212?style=flat&logo=medium&logoColor=white" alt="Medium"></a>
- [![Reddit](https://img.shields.io/badge/Reddit-r%2Fwordchain2026__dev-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/wordchain2026_dev/)
+ ![Reddit](https://img.shields.io/badge/Reddit-r%2Fwordchain2026__dev-FF4500?style=for-the-badge&logo=reddit&logoColor=white)(https://www.reddit.com/r/wordchain2026_dev/)
 </p>
 
 
