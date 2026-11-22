@@ -80,7 +80,7 @@ Every system is engineered with:
 
 
 > 💬 **Proof of work:** When a viral thread asked how to route AI queries without doubling latency and cost — I already had the answer built.
-> "Don't use an LLM to route an LLM." · 2,510 impressions · [View Post →](YOUR-POST-URL-HERE)
+> "Don't use an LLM to route an LLM." · 2,510 impressions · [View Post →](https://lnkd.in/p/eSpJeh2E)
  🧠 Architectural Case Study: Optimizing LLM Routing
 
 * **The Insight:** Don't use an LLM to route an LLM—that doubles your latency and cost.
