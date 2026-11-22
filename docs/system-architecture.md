@@ -34,5 +34,5 @@ The system enforces a strict separation between the agentic reasoning layer and 
 * **State Persistence:** Maintains operational reliability and low latency across multi-agent handoffs.
 
 ## Live Endpoints & Verification
-* **Live Public Application:** [Vercel Endpoint](linkedinsecurityauditdashboard.vercel.app)
+* **Live Public Application:** [Vercel Endpoint](http://linkedinsecurityauditdashboard.vercel.app)
 * **Architecture Demonstration:** Verified via accompanying 2-minute system execution video
