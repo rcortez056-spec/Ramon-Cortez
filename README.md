@@ -79,7 +79,8 @@ Every system is engineered with:
 ### 🚀 Featured Frameworks & Projects
 
 
-<img src="./Screenshot_20-8-2026_181854_www.linkedin.com.jpeg" width="480" alt="LLM Routing Architecture" />
+> 💬 **Proof of work:** When a viral thread asked how to route AI queries without doubling latency and cost — I already had the answer built.
+> "Don't use an LLM to route an LLM." · 2,510 impressions · [View Post →](YOUR-POST-URL-HERE)
  🧠 Architectural Case Study: Optimizing LLM Routing
 
 * **The Insight:** Don't use an LLM to route an LLM—that doubles your latency and cost.
