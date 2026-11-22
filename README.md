@@ -219,7 +219,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
 🔐 **LinkedIn Content Security Audit**
 * Real-time scanning for exposed credentials, API keys, and secrets before publishing
 
-*  **Status:** Production-Ready | [View Live Demo](linkedinsecurityauditdashboard.vercel.app)
+*  **Status:** Production-Ready | [View Live Demo](https://linkedinsecurityauditdashboard.vercel.app)
 
 * **Vertex Architecture Orchestration:** Pipelines & Automation | [View Live Demo](https://vertex-ramon.netlify.app)
  ### 💼 Enterprise Engagement 
