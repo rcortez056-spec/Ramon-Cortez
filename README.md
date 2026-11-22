@@ -197,7 +197,7 @@ A high-impact revenue engine tracking active client acquisition pipelines, autom
  ### 📬 Connect With Me
 # Production AI Infrastructure: Truth Engine
 ### Immutable State Ledger & Multi-Agent Orchestration 
-**Sential Engine**-Status: Production-Ready | [View Live Demo](https://sentinel-1-ramon.netlify.app)
+**Sentinel Engine**-Status: Production-Ready | [View Live Demo](https://sentinel-1-ramon.netlify.app)
 
 **Truth Engine Video Demo**-Status: Production-Ready | [View Live Demo](https://immutable-3-ramon.netlify.app)
 ### 🚀 Production-Grade Agent Architecture Demos
