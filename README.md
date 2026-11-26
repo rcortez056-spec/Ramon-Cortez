@@ -8,6 +8,7 @@
   <a href="https://medium.com/@rcortez056"><img src="https://img.shields.io/badge/Medium-121212?style=flat&logo=medium&logoColor=white" alt="Medium"></a>
  <a href="https://www.reddit.com/r/wordchain2026_dev/"><img src="https://img.shields.io/badge/Reddit-r%2Fwordchain2026__dev-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit"></a>
  <a href="https://github.com/rcortez056-spec/agent-pipeline/actions/workflows/linter.yml"><img src="https://img.shields.io/github/actions/workflow/status/rcortez056-spec/agent-pipeline/linter.yml?style=flat&logo=github&label=lint&branch=main" alt="lint"></a>
+ 
  <a href="https://github.com/rcortez056-spec/agent-pipeline/actions/workflows/agent-pipeline.yml"><img src="https://img.shields.io/github/actions/workflow/status/rcortez056-spec/agent-pipeline/agent-pipeline.yml?style=flat&logo=github&label=agent-audit&branch=main" alt="agent-audit"></a>
 </p>
 
